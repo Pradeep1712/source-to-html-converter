@@ -1,0 +1,9252 @@
+File opened successfully
+HTML File opened successfully
+Buffer is 
+
+Buffer is 
+const char* keywords[32] = {
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : keywords
+
+Special Character : [
+Integer Constant : 32
+Special Character : ]
+Operator : =
+Special Character : {
+Buffer is     "auto", "break", "case", "char", "const", "continue", "default", "do",
+String Literal : "auto"
+Special Character : ,
+String Literal : "break"
+Special Character : ,
+String Literal : "case"
+Special Character : ,
+String Literal : "char"
+Special Character : ,
+String Literal : "const"
+Special Character : ,
+String Literal : "continue"
+Special Character : ,
+String Literal : "default"
+Special Character : ,
+String Literal : "do"
+Special Character : ,
+Buffer is     "double", "else", "enum", "extern", "float", "for", "goto", "if",
+String Literal : "double"
+Special Character : ,
+String Literal : "else"
+Special Character : ,
+String Literal : "enum"
+Special Character : ,
+String Literal : "extern"
+Special Character : ,
+String Literal : "float"
+Special Character : ,
+String Literal : "for"
+Special Character : ,
+String Literal : "goto"
+Special Character : ,
+String Literal : "if"
+Special Character : ,
+Buffer is     "int", "long", "register", "return", "short", "signed", "sizeof",
+String Literal : "int"
+Special Character : ,
+String Literal : "long"
+Special Character : ,
+String Literal : "register"
+Special Character : ,
+String Literal : "return"
+Special Character : ,
+String Literal : "short"
+Special Character : ,
+String Literal : "signed"
+Special Character : ,
+String Literal : "sizeof"
+Special Character : ,
+Buffer is     "static", "struct", "switch", "typedef", "union", "unsigned", "void",
+String Literal : "static"
+Special Character : ,
+String Literal : "struct"
+Special Character : ,
+String Literal : "switch"
+Special Character : ,
+String Literal : "typedef"
+Special Character : ,
+String Literal : "union"
+Special Character : ,
+String Literal : "unsigned"
+Special Character : ,
+String Literal : "void"
+Special Character : ,
+Buffer is     "volatile", "while"
+String Literal : "volatile"
+Special Character : ,
+String Literal : "while"
+Buffer is };
+Special Character : }
+Special Character : ;
+Buffer is 
+
+Buffer is  const char* operators = "+-*/%=!<>|&";
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : operators
+
+Operator : =
+String Literal : "+-*/%=!<>|&"
+Special Character : ;
+Buffer is  const char* specialCharacters = ":,;{}()[]\'\"";
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : specialCharacters
+
+Operator : =
+String Literal : ":,;{}()[]\'\""
+Special Character : ;
+Buffer is 
+ const char* validCharConstants[11] = {
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : validCharConstants
+
+Special Character : [
+Integer Constant : 11
+Special Character : ]
+Operator : =
+Special Character : {
+Buffer is     "\\n", "\\t", "\\r", "\\0", "\\a", "\\b", "\\f", "\\v",
+String Literal : "\\n"
+Special Character : ,
+String Literal : "\\t"
+Special Character : ,
+String Literal : "\\r"
+Special Character : ,
+String Literal : "\\0"
+Special Character : ,
+String Literal : "\\a"
+Special Character : ,
+String Literal : "\\b"
+Special Character : ,
+String Literal : "\\f"
+Special Character : ,
+String Literal : "\\v"
+Special Character : ,
+Buffer is     "\\'", "\\\"", "\\\\"
+String Literal : "\\'"
+Special Character : ,
+String Literal : "\\\""
+Special Character : ,
+String Literal : "\\\\"
+Buffer is };
+Special Character : }
+Special Character : ;
+Buffer is 
+
+Buffer is typedef enum successret{
+Keyword : typedef
+Keyword : enum
+Identifiers : successret
+
+Special Character : {
+Buffer is     e_success,
+Identifiers : e_success
+
+Special Character : ,
+Buffer is     e_failure
+Identifiers : e_failure
+
+Buffer is }Status;
+Special Character : }
+Identifiers : Status
+
+Special Character : ;
+Buffer is FILE *fp;
+Identifiers : FILE
+
+Operator : *
+Identifiers : fp
+
+Special Character : ;
+Buffer is FILE *html;
+Identifiers : FILE
+
+Operator : *
+Identifiers : html
+
+Special Character : ;
+Buffer is Status Read_and_Validate_Args(char *Filename);
+Identifiers : Status
+
+Identifiers : Read_and_Validate_Args
+
+Special Character : (
+Keyword : char
+Operator : *
+Identifiers : Filename
+
+Special Character : )
+Special Character : ;
+Buffer is Status OpenFile();
+Identifiers : Status
+
+Identifiers : OpenFile
+
+Special Character : (
+Special Character : )
+Special Character : ;
+Buffer is Status AnalyzeLexical();
+Identifiers : Status
+
+Identifiers : AnalyzeLexical
+
+Special Character : (
+Special Character : )
+Special Character : ;
+Buffer is Status AnalyseLine(char *buffer);
+Identifiers : Status
+
+Identifiers : AnalyseLine
+
+Special Character : (
+Keyword : char
+Operator : *
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is Status CheckCharIsOperatorOrSpecialCharacters(char ch,int num);
+Identifiers : Status
+
+Identifiers : CheckCharIsOperatorOrSpecialCharacters
+
+Special Character : (
+Keyword : char
+Identifiers : ch
+
+Special Character : ,
+Keyword : int
+Identifiers : num
+
+Special Character : )
+Special Character : ;
+Buffer is Status CompareWord(char *Word,const char* keywords[],const char* operators);
+Identifiers : Status
+
+Identifiers : CompareWord
+
+Special Character : (
+Keyword : char
+Operator : *
+Identifiers : Word
+
+Special Character : ,
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : keywords
+
+Special Character : [
+Special Character : ]
+Special Character : ,
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : operators
+
+Special Character : )
+Special Character : ;
+Buffer is  Status CompareSubWord(char *Word,const char* keywords[],const char* operators);
+Identifiers : Status
+
+Identifiers : CompareSubWord
+
+Special Character : (
+Keyword : char
+Operator : *
+Identifiers : Word
+
+Special Character : ,
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : keywords
+
+Special Character : [
+Special Character : ]
+Special Character : ,
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : operators
+
+Special Character : )
+Special Character : ;
+Buffer is Status SetUpHTML();
+Identifiers : Status
+
+Identifiers : SetUpHTML
+
+Special Character : (
+Special Character : )
+Special Character : ;
+Buffer is  Status ProcessPreprocessor(char *buffer);
+Identifiers : Status
+
+Identifiers : ProcessPreprocessor
+
+Special Character : (
+Keyword : char
+Operator : *
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is 
+
+Buffer is int OpenBracketcount=0;
+Keyword : int
+Identifiers : OpenBracketcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is int CloseBracketcount=0;
+Keyword : int
+Identifiers : CloseBracketcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is int OpencurlyBracketcount=0;
+Keyword : int
+Identifiers : OpencurlyBracketcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is int ClosecurlyBracketcount=0;
+Keyword : int
+Identifiers : ClosecurlyBracketcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is int LiteralOpencount=0;
+Keyword : int
+Identifiers : LiteralOpencount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is int LiteralClosecount=0;
+Keyword : int
+Identifiers : LiteralClosecount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is int opensquarebracketCount=0;
+Keyword : int
+Identifiers : opensquarebracketCount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is int closesquarebracketCount=0;
+Keyword : int
+Identifiers : closesquarebracketCount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is long int FileSize;
+Keyword : long
+Keyword : int
+Identifiers : FileSize
+
+Special Character : ;
+Buffer is int newlineflag=0;
+Keyword : int
+Identifiers : newlineflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is 
+int main(int argc, char *argv[]){
+Keyword : int
+Identifiers : main
+
+Special Character : (
+Keyword : int
+Identifiers : argc
+
+Special Character : ,
+Keyword : char
+Operator : *
+Identifiers : argv
+
+Special Character : [
+Special Character : ]
+Special Character : )
+Special Character : {
+Buffer is     if(argc!=2){
+Keyword : if
+Special Character : (
+Identifiers : argc
+
+Operator : !
+Operator : =
+Integer Constant : 2
+Special Character : )
+Special Character : {
+Buffer is         printf("Insufficient arguments\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Insufficient arguments\n"
+Special Character : )
+Special Character : ;
+Buffer is         return 0;
+Keyword : return
+Integer Constant : 0
+Special Character : ;
+Buffer is     }
+Special Character : }
+Buffer is     Status Okvalid = Read_and_Validate_Args(argv[1]);
+Identifiers : Status
+
+Identifiers : Okvalid
+
+Operator : =
+Identifiers : Read_and_Validate_Args
+
+Special Character : (
+Identifiers : argv
+
+Special Character : [
+Integer Constant : 1
+Special Character : ]
+Special Character : )
+Special Character : ;
+Buffer is     if(Okvalid==e_failure){
+Keyword : if
+Special Character : (
+Identifiers : Okvalid
+
+Operator : =
+Operator : =
+Identifiers : e_failure
+
+Special Character : )
+Special Character : {
+Buffer is         printf("Error in Filename\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error in Filename\n"
+Special Character : )
+Special Character : ;
+Buffer is         return 0;
+Keyword : return
+Integer Constant : 0
+Special Character : ;
+Buffer is     }
+Special Character : }
+Buffer is     Status res=OpenFile();
+Identifiers : Status
+
+Identifiers : res
+
+Operator : =
+Identifiers : OpenFile
+
+Special Character : (
+Special Character : )
+Special Character : ;
+Buffer is     if(res==e_success){
+Keyword : if
+Special Character : (
+Identifiers : res
+
+Operator : =
+Operator : =
+Identifiers : e_success
+
+Special Character : )
+Special Character : {
+Buffer is         SetUpHTML();
+Identifiers : SetUpHTML
+
+Special Character : (
+Special Character : )
+Special Character : ;
+Buffer is         AnalyzeLexical();
+Identifiers : AnalyzeLexical
+
+Special Character : (
+Special Character : )
+Special Character : ;
+Buffer is     }
+Special Character : }
+Buffer is     printf("Opencurly and close curly is %d and %d\n",OpencurlyBracketcount,ClosecurlyBracketcount);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Opencurly and close curly is %d and %d\n"
+Special Character : ,
+Identifiers : OpencurlyBracketcount
+
+Special Character : ,
+Identifiers : ClosecurlyBracketcount
+
+Special Character : )
+Special Character : ;
+Buffer is     if(OpencurlyBracketcount!=ClosecurlyBracketcount){
+Keyword : if
+Special Character : (
+Identifiers : OpencurlyBracketcount
+
+Operator : !
+Operator : =
+Identifiers : ClosecurlyBracketcount
+
+Special Character : )
+Special Character : {
+Buffer is         if(OpencurlyBracketcount>ClosecurlyBracketcount){
+Keyword : if
+Special Character : (
+Identifiers : OpencurlyBracketcount
+
+Operator : >
+Identifiers : ClosecurlyBracketcount
+
+Special Character : )
+Special Character : {
+Buffer is             printf(" Error :  } missing\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : " Error :  } missing\n"
+Special Character : )
+Special Character : ;
+Buffer is         }else if(OpencurlyBracketcount<ClosecurlyBracketcount){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : OpencurlyBracketcount
+
+Operator : <
+Identifiers : ClosecurlyBracketcount
+
+Special Character : )
+Special Character : {
+Buffer is             printf("Error : { missing\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error : { missing\n"
+Special Character : )
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is     }
+Special Character : }
+Buffer is     fclose(fp);
+Identifiers : fclose
+
+Special Character : (
+Identifiers : fp
+
+Special Character : )
+Special Character : ;
+Buffer is     fprintf(html, "</pre></body></html>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "</pre></body></html>"
+Special Character : )
+Special Character : ;
+Buffer is     fclose(html);
+Identifiers : fclose
+
+Special Character : (
+Identifiers : html
+
+Special Character : )
+Special Character : ;
+Buffer is 
+}
+Special Character : }
+Buffer is 
+Status Read_and_Validate_Args(char *Filename){
+Identifiers : Status
+
+Identifiers : Read_and_Validate_Args
+
+Special Character : (
+Keyword : char
+Operator : *
+Identifiers : Filename
+
+Special Character : )
+Special Character : {
+Buffer is       int len = strlen(Filename);
+Keyword : int
+Identifiers : len
+
+Operator : =
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Filename
+
+Special Character : )
+Special Character : ;
+Buffer is     if (len < 3 || strcmp(Filename + (len - 2), ".c") != 0){
+Keyword : if
+Special Character : (
+Identifiers : len
+
+Operator : <
+Integer Constant : 3
+Operator : |
+Operator : |
+Identifiers : strcmp
+
+Special Character : (
+Identifiers : Filename
+
+Operator : +
+Special Character : (
+Identifiers : len
+
+Operator : -
+Integer Constant : 2
+Special Character : )
+Special Character : ,
+String Literal : ".c"
+Special Character : )
+Operator : !
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is         return e_failure;
+Keyword : return
+Identifiers : e_failure
+
+Special Character : ;
+Buffer is     }
+Special Character : }
+Buffer is 
+    
+Buffer is     int dot_count = 0;
+Keyword : int
+Identifiers : dot_count
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is     for (size_t i = 0; i < len; i++){
+Keyword : for
+Special Character : (
+Identifiers : size_t
+
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Identifiers : len
+
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is         if (Filename[i] == '.'){
+Keyword : if
+Special Character : (
+Identifiers : Filename
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '.'
+Special Character : )
+Special Character : {
+Buffer is             dot_count++;
+Identifiers : dot_count
+
+Operator : +
+Operator : +
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is     }
+Special Character : }
+Buffer is 
+    if (dot_count != 1){
+Keyword : if
+Special Character : (
+Identifiers : dot_count
+
+Operator : !
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is         return e_failure;
+Keyword : return
+Identifiers : e_failure
+
+Special Character : ;
+Buffer is     }
+Special Character : }
+Buffer is 
+    
+Buffer is     return e_success;
+Keyword : return
+Identifiers : e_success
+
+Special Character : ;
+Buffer is 
+
+Buffer is }
+Special Character : }
+Buffer is 
+
+Buffer is Status OpenFile(){
+Identifiers : Status
+
+Identifiers : OpenFile
+
+Special Character : (
+Special Character : )
+Special Character : {
+Buffer is     fp=fopen("sample.c","r");
+Identifiers : fp
+
+Operator : =
+Identifiers : fopen
+
+Special Character : (
+String Literal : "sample.c"
+Special Character : ,
+String Literal : "r"
+Special Character : )
+Special Character : ;
+Buffer is     if(fp==NULL){
+Keyword : if
+Special Character : (
+Identifiers : fp
+
+Operator : =
+Operator : =
+Identifiers : NULL
+
+Special Character : )
+Special Character : {
+Buffer is         printf("Error opening file\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error opening file\n"
+Special Character : )
+Special Character : ;
+Buffer is         return e_failure;
+Keyword : return
+Identifiers : e_failure
+
+Special Character : ;
+Buffer is     }else if(fp!=NULL){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : fp
+
+Operator : !
+Operator : =
+Identifiers : NULL
+
+Special Character : )
+Special Character : {
+Buffer is         printf("File opened successfully\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "File opened successfully\n"
+Special Character : )
+Special Character : ;
+Buffer is 
+    }
+Special Character : }
+Buffer is 
+    html=fopen("converted.html","w");
+Identifiers : html
+
+Operator : =
+Identifiers : fopen
+
+Special Character : (
+String Literal : "converted.html"
+Special Character : ,
+String Literal : "w"
+Special Character : )
+Special Character : ;
+Buffer is      if(html==NULL){
+Keyword : if
+Special Character : (
+Identifiers : html
+
+Operator : =
+Operator : =
+Identifiers : NULL
+
+Special Character : )
+Special Character : {
+Buffer is         printf("Error opening file\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error opening file\n"
+Special Character : )
+Special Character : ;
+Buffer is         return e_failure;
+Keyword : return
+Identifiers : e_failure
+
+Special Character : ;
+Buffer is     }else if(html!=NULL){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : html
+
+Operator : !
+Operator : =
+Identifiers : NULL
+
+Special Character : )
+Special Character : {
+Buffer is         printf("HTML File opened successfully\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "HTML File opened successfully\n"
+Special Character : )
+Special Character : ;
+Buffer is 
+    }return e_success;
+Special Character : }
+Keyword : return
+Identifiers : e_success
+
+Special Character : ;
+Buffer is 
+}
+Special Character : }
+Buffer is 
+
+Buffer is Status SetUpHTML(){
+Identifiers : Status
+
+Identifiers : SetUpHTML
+
+Special Character : (
+Special Character : )
+Special Character : {
+Buffer is      
+Buffer is fprintf(html, "<!DOCTYPE html><html><head><style>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<!DOCTYPE html><html><head><style>"
+Special Character : )
+Special Character : ;
+Buffer is fprintf(html, "body { font-family: monospace; }");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "body { font-family: monospace; }"
+Special Character : )
+Special Character : ;
+Buffer is fprintf(html, ".keyword { color: blue; font-weight: bold; }");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : ".keyword { color: blue; font-weight: bold; }"
+Special Character : )
+Special Character : ;
+Buffer is fprintf(html, ".identifier { color: black; }");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : ".identifier { color: black; }"
+Special Character : )
+Special Character : ;
+Buffer is fprintf(html, ".operator { color: red; }");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : ".operator { color: red; }"
+Special Character : )
+Special Character : ;
+Buffer is fprintf(html, ".special { color: Steel Blue ; }");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : ".special { color: Steel Blue ; }"
+Special Character : )
+Special Character : ;
+Buffer is fprintf(html, ".string { color: brown; }");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : ".string { color: brown; }"
+Special Character : )
+Special Character : ;
+Buffer is fprintf(html, ".constant { color: purple; }");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : ".constant { color: purple; }"
+Special Character : )
+Special Character : ;
+Buffer is fprintf(html, "</style></head><body><pre>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "</style></head><body><pre>"
+Special Character : )
+Special Character : ;
+Buffer is 
+}
+Special Character : }
+Buffer is 
+
+Buffer is 
+
+Buffer is 
+ Status AnalyzeLexical(){
+Identifiers : Status
+
+Identifiers : AnalyzeLexical
+
+Special Character : (
+Special Character : )
+Special Character : {
+Buffer is       
+Buffer is       int multilineindex=1;
+Keyword : int
+Identifiers : multilineindex
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is       int multilineflag=0;
+Keyword : int
+Identifiers : multilineflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is       fseek(fp,0,SEEK_END);
+Identifiers : fseek
+
+Special Character : (
+Identifiers : fp
+
+Special Character : ,
+Integer Constant : 0
+Special Character : ,
+Identifiers : SEEK_END
+
+Special Character : )
+Special Character : ;
+Buffer is       FileSize=ftell(fp);
+Identifiers : FileSize
+
+Operator : =
+Identifiers : ftell
+
+Special Character : (
+Identifiers : fp
+
+Special Character : )
+Special Character : ;
+Buffer is       if(FileSize==0){
+Keyword : if
+Special Character : (
+Identifiers : FileSize
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is         printf("content not exists in file\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "content not exists in file\n"
+Special Character : )
+Special Character : ;
+Buffer is         return e_failure;
+Keyword : return
+Identifiers : e_failure
+
+Special Character : ;
+Buffer is       }
+Special Character : }
+Buffer is       rewind(fp);
+Identifiers : rewind
+
+Special Character : (
+Identifiers : fp
+
+Special Character : )
+Special Character : ;
+Buffer is 
+      int ch;
+Keyword : int
+Identifiers : ch
+
+Special Character : ;
+Buffer is       int linecount=0;
+Keyword : int
+Identifiers : linecount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is       int i=0;
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is       char *buffer=malloc(200);
+Keyword : char
+Operator : *
+Identifiers : buffer
+
+Operator : =
+Identifiers : malloc
+
+Special Character : (
+Integer Constant : 200
+Special Character : )
+Special Character : ;
+Buffer is       while((ch=fgetc(fp))!=EOF){
+Keyword : while
+Special Character : (
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Identifiers : fgetc
+
+Special Character : (
+Identifiers : fp
+
+Special Character : )
+Special Character : )
+Operator : !
+Operator : =
+Identifiers : EOF
+
+Special Character : )
+Special Character : {
+Buffer is         printf("enterr ... and ch is %d\n",ch);
+Identifiers : printf
+
+Special Character : (
+String Literal : "enterr ... and ch is %d\n"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is              if(ch=='\r'){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Character constant : '\r'
+Special Character : )
+Special Character : {
+Buffer is                 continue;
+Keyword : continue
+Special Character : ;
+Buffer is              }
+Special Character : }
+Buffer is               i=0;
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                 if(ch==EOF){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Identifiers : EOF
+
+Special Character : )
+Special Character : {
+Buffer is                 break;
+Keyword : break
+Special Character : ;
+Buffer is               }
+Special Character : }
+Buffer is               
+Buffer is 
+               buffer[0]=ch;
+Identifiers : buffer
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : =
+Identifiers : ch
+
+Special Character : ;
+Buffer is 
+
+Buffer is               
+Buffer is               ch=fgetc(fp);
+Identifiers : ch
+
+Operator : =
+Identifiers : fgetc
+
+Special Character : (
+Identifiers : fp
+
+Special Character : )
+Special Character : ;
+Buffer is 
+                
+/*if(ch=='\n' || ch==EOF){
+*/Buffer is 
+
+Buffer is                     
+Buffer is 
+
+Buffer is                 if(ch!='\n'){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : !
+Operator : =
+Character constant : '\n'
+Special Character : )
+Special Character : {
+Buffer is                 
+Buffer is                i+=1;
+Identifiers : i
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is 
+
+Buffer is                if(ch!=EOF ){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : !
+Operator : =
+Identifiers : EOF
+
+Special Character : )
+Special Character : {
+Buffer is                 printf("here ch is %d ...\n",ch);
+Identifiers : printf
+
+Special Character : (
+String Literal : "here ch is %d ...\n"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is 
+               buffer[i]=ch;
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Identifiers : ch
+
+Special Character : ;
+Buffer is 
+
+Buffer is                }
+Special Character : }
+Buffer is                 ch=fgetc(fp);
+Identifiers : ch
+
+Operator : =
+Identifiers : fgetc
+
+Special Character : (
+Identifiers : fp
+
+Special Character : )
+Special Character : ;
+Buffer is 
+                 printf("ch is %d\n",ch);
+Identifiers : printf
+
+Special Character : (
+String Literal : "ch is %d\n"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is 
+                i+=1;
+Identifiers : i
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                 int skip=0;
+Keyword : int
+Identifiers : skip
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                 int MultilineFound=0;
+Keyword : int
+Identifiers : MultilineFound
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                 int MultilineEnd=0;
+Keyword : int
+Identifiers : MultilineEnd
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                 int SingleLineCommentend=0;
+Keyword : int
+Identifiers : SingleLineCommentend
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is 
+              
+/*  if(ftell(fp)==FileSize){
+*/Buffer is 
+
+Buffer is                 if(ch=='\n' || ch==EOF){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Character constant : '\n'
+Operator : |
+Operator : |
+Identifiers : ch
+
+Operator : =
+Operator : =
+Identifiers : EOF
+
+Special Character : )
+Special Character : {
+Buffer is                     if(ch=='\n'){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Character constant : '\n'
+Special Character : )
+Special Character : {
+Buffer is                        
+Buffer is                        printf("writing newline -1\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "writing newline -1\n"
+Special Character : )
+Special Character : ;
+Buffer is                        buffer[i]='\0';
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                     
+Buffer is                     AnalyseLine(buffer);
+Identifiers : AnalyseLine
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is                     printf("returns  1...\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "returns  1...\n"
+Special Character : )
+Special Character : ;
+Buffer is                     memset(buffer, '\0', 200);
+Identifiers : memset
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : ,
+Character constant : '\0'
+Special Character : ,
+Integer Constant : 200
+Special Character : )
+Special Character : ;
+Buffer is                         fprintf(html, "\n");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "\n"
+Special Character : )
+Special Character : ;
+Buffer is 
+                    }
+Special Character : }
+Buffer is 
+                }
+Special Character : }
+Buffer is 
+                while(ch!='\n' && ch!=EOF){
+Keyword : while
+Special Character : (
+Identifiers : ch
+
+Operator : !
+Operator : =
+Character constant : '\n'
+Operator : &
+Operator : &
+Identifiers : ch
+
+Operator : !
+Operator : =
+Identifiers : EOF
+
+Special Character : )
+Special Character : {
+Buffer is                     
+Buffer is                      if(ch!=EOF ){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : !
+Operator : =
+Identifiers : EOF
+
+Special Character : )
+Special Character : {
+Buffer is                     
+Buffer is 
+                      buffer[i]=ch;
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Identifiers : ch
+
+Special Character : ;
+Buffer is                       i+=1;
+Identifiers : i
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                      }
+Special Character : }
+Buffer is                       ch=fgetc(fp);
+Identifiers : ch
+
+Operator : =
+Identifiers : fgetc
+
+Special Character : (
+Identifiers : fp
+
+Special Character : )
+Special Character : ;
+Buffer is                     
+/*   if(ftell(fp)==FileSize){
+*/Buffer is 
+
+Buffer is                       if(ch=='\n' || ch==EOF){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Character constant : '\n'
+Operator : |
+Operator : |
+Identifiers : ch
+
+Operator : =
+Operator : =
+Identifiers : EOF
+
+Special Character : )
+Special Character : {
+Buffer is 
+                        if(ftell(fp)==FileSize){
+Keyword : if
+Special Character : (
+Identifiers : ftell
+
+Special Character : (
+Identifiers : fp
+
+Special Character : )
+Operator : =
+Operator : =
+Identifiers : FileSize
+
+Special Character : )
+Special Character : {
+Buffer is                     printf("Full here...\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Full here...\n"
+Special Character : )
+Special Character : ;
+Buffer is                     buffer[i]='\0';
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                     if(strlen(buffer) > 0){
+Keyword : if
+Special Character : (
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Operator : >
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                         printf("analyseBuffer with len is %ld\n",strlen(buffer));
+Identifiers : printf
+
+Special Character : (
+String Literal : "analyseBuffer with len is %ld\n"
+Special Character : ,
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : )
+Special Character : ;
+Buffer is                     AnalyseLine(buffer);
+Identifiers : AnalyseLine
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is                     memset(buffer, '\0', 200);
+Identifiers : memset
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : ,
+Character constant : '\0'
+Special Character : ,
+Integer Constant : 200
+Special Character : )
+Special Character : ;
+Buffer is                     break;
+Keyword : break
+Special Character : ;
+Buffer is                     }
+Special Character : }
+Buffer is 
+
+Buffer is                 }
+Special Character : }
+Buffer is 
+
+Buffer is                          if(ch=='\n'){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Character constant : '\n'
+Special Character : )
+Special Character : {
+Buffer is                           
+Buffer is                           printf("writing newline -2\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "writing newline -2\n"
+Special Character : )
+Special Character : ;
+Buffer is                         
+Buffer is 
+
+Buffer is                     }
+Special Character : }
+Buffer is                         buffer[i]='\0';
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                         
+Buffer is                         
+Buffer is                         for(int j=0;j<strlen(buffer);j++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : j
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : j
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : j
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                             
+Buffer is                             if(buffer[j]=='#'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '#'
+Special Character : )
+Special Character : {
+Buffer is                               if(buffer[j-1]!='\''){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : j
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : !
+Operator : =
+Character constant : '\''
+Special Character : )
+Special Character : {
+Buffer is                               skip=1;
+Identifiers : skip
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                               ProcessPreprocessor(buffer);
+Identifiers : ProcessPreprocessor
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is                               printf("Skipped\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Skipped\n"
+Special Character : )
+Special Character : ;
+Buffer is                               break;
+Keyword : break
+Special Character : ;
+Buffer is                               }
+Special Character : }
+Buffer is                             }else if(buffer[j]=='/'){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '/'
+Special Character : )
+Special Character : {
+Buffer is                                 
+Buffer is                                 printf("Found here ...\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Found here ...\n"
+Special Character : )
+Special Character : ;
+Buffer is                                 if(buffer[j+1]=='/'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : j
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '/'
+Special Character : )
+Special Character : {
+Buffer is                                       if(j==0){
+Keyword : if
+Special Character : (
+Identifiers : j
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is 
+                                        printf("here . \n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "here . \n"
+Special Character : )
+Special Character : ;
+Buffer is                                         printf(" str is %s\n",buffer);
+Identifiers : printf
+
+Special Character : (
+String Literal : " str is %s\n"
+Special Character : ,
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is                                         buffer[strlen(buffer)-1]='\0';
+Identifiers : buffer
+
+Special Character : [
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                                         fprintf(html, "<span style='color: green;'>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: green;'>"
+Special Character : )
+Special Character : ;
+Buffer is                                          for(int p=0;p<strlen(buffer);p++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : p
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : p
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : p
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                                                     switch(buffer[p]){
+Keyword : switch
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : p
+
+Special Character : ]
+Special Character : )
+Special Character : {
+Buffer is                                                      case '<': fprintf(html, "&lt;"); break;
+Keyword : case
+Character constant '<'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&lt;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case '>': fprintf(html, "&gt;"); break;
+Keyword : case
+Character constant '>'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&gt;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case '\"': fprintf(html, "&quot;"); break;
+Keyword : case
+Character constant : '\"'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&quot;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case '&': fprintf(html, "&amp;"); break;
+Keyword : case
+Character constant '&'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&amp;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case ' ': fprintf(html, "&nbsp;"); break;
+Keyword : case
+Character constant ' '
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&nbsp;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      default: fputc(buffer[p], html); break;
+Keyword : default
+Special Character : :
+Identifiers : fputc
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : p
+
+Special Character : ]
+Special Character : ,
+Identifiers : html
+
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                     }
+Special Character : }
+Buffer is                                                  }
+Special Character : }
+Buffer is                                          SingleLineCommentend=1;
+Identifiers : SingleLineCommentend
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                          fprintf(html, "</span>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "</span>"
+Special Character : )
+Special Character : ;
+Buffer is 
+                                      }else{
+Special Character : }
+Keyword : else
+Special Character : {
+Buffer is                                         char singlelinecommentstr[200];
+Keyword : char
+Identifiers : singlelinecommentstr
+
+Special Character : [
+Integer Constant : 200
+Special Character : ]
+Special Character : ;
+Buffer is                                         int begin=0;
+Keyword : int
+Identifiers : begin
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                        printf("here .. \n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "here .. \n"
+Special Character : )
+Special Character : ;
+Buffer is                                                for(int c=j;c<strlen(buffer);c++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : c
+
+Operator : =
+Identifiers : j
+
+Special Character : ;
+Identifiers : c
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : c
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                                                    if(buffer[c]!='\r'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant : '\r'
+Special Character : )
+Special Character : {
+Buffer is                                                     singlelinecommentstr[begin]=buffer[c];
+Identifiers : singlelinecommentstr
+
+Special Character : [
+Identifiers : begin
+
+Special Character : ]
+Operator : =
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Special Character : ;
+Buffer is                                                     begin+=1;
+Identifiers : begin
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                                    }
+Special Character : }
+Buffer is                                                }
+Special Character : }
+Buffer is                                                  
+Buffer is                                                    
+Buffer is                                                    
+Buffer is                                                  
+Buffer is 
+                                                singlelinecommentstr[begin]='\0';
+Identifiers : singlelinecommentstr
+
+Special Character : [
+Identifiers : begin
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                                                  buffer[j]='\0';
+Identifiers : buffer
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                                                  AnalyseLine(buffer);
+Identifiers : AnalyseLine
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is                                                 memset(buffer, '\0', 200);
+Identifiers : memset
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : ,
+Character constant : '\0'
+Special Character : ,
+Integer Constant : 200
+Special Character : )
+Special Character : ;
+Buffer is                                                  printf("sing : %s\n",singlelinecommentstr);
+Identifiers : printf
+
+Special Character : (
+String Literal : "sing : %s\n"
+Special Character : ,
+Identifiers : singlelinecommentstr
+
+Special Character : )
+Special Character : ;
+Buffer is                                                  fprintf(html, "<span style='color: green;'>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: green;'>"
+Special Character : )
+Special Character : ;
+Buffer is                                                  for(int p=0;p<strlen(singlelinecommentstr);p++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : p
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : p
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : singlelinecommentstr
+
+Special Character : )
+Special Character : ;
+Identifiers : p
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                                                     switch(singlelinecommentstr[p]){
+Keyword : switch
+Special Character : (
+Identifiers : singlelinecommentstr
+
+Special Character : [
+Identifiers : p
+
+Special Character : ]
+Special Character : )
+Special Character : {
+Buffer is                                                      case '<': fprintf(html, "&lt;"); break;
+Keyword : case
+Character constant '<'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&lt;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case '>': fprintf(html, "&gt;"); break;
+Keyword : case
+Character constant '>'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&gt;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case '\"': fprintf(html, "&quot;"); break;
+Keyword : case
+Character constant : '\"'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&quot;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case '&': fprintf(html, "&amp;"); break;
+Keyword : case
+Character constant '&'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&amp;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case ' ': fprintf(html, "&nbsp;"); break;
+Keyword : case
+Character constant ' '
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&nbsp;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      default: fputc(singlelinecommentstr[p], html); break;
+Keyword : default
+Special Character : :
+Identifiers : fputc
+
+Special Character : (
+Identifiers : singlelinecommentstr
+
+Special Character : [
+Identifiers : p
+
+Special Character : ]
+Special Character : ,
+Identifiers : html
+
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                     }
+Special Character : }
+Buffer is                                                  }
+Special Character : }
+Buffer is                                                  
+Buffer is                                                  SingleLineCommentend=1;
+Identifiers : SingleLineCommentend
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                                  fprintf(html, "</span>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "</span>"
+Special Character : )
+Special Character : ;
+Buffer is 
+                                            }
+Special Character : }
+Buffer is 
+                                       
+Buffer is 
+                                       break;
+Keyword : break
+Special Character : ;
+Buffer is                                 }else if(buffer[j+1]=='*'){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : j
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '*'
+Special Character : )
+Special Character : {
+Buffer is                                        
+Buffer is                                        if(j!=0){
+Keyword : if
+Special Character : (
+Identifiers : j
+
+Operator : !
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                                         char multilinestr[200];
+Keyword : char
+Identifiers : multilinestr
+
+Special Character : [
+Integer Constant : 200
+Special Character : ]
+Special Character : ;
+Buffer is                                         int begin=0;
+Keyword : int
+Identifiers : begin
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                         int state = 0;
+Keyword : int
+Identifiers : state
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                         int recc;
+Keyword : int
+Identifiers : recc
+
+Special Character : ;
+Buffer is                                         begin=0;
+Identifiers : begin
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                         for(int c=j;c<strlen(buffer);c++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : c
+
+Operator : =
+Identifiers : j
+
+Special Character : ;
+Identifiers : c
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : c
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                                             if(buffer[c]!='\r'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant : '\r'
+Special Character : )
+Special Character : {
+Buffer is                                              multilinestr[begin]=buffer[c];
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Special Character : ]
+Operator : =
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Special Character : ;
+Buffer is                                              begin+=1;
+Identifiers : begin
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                             }
+Special Character : }
+Buffer is                                             if(buffer[c]=='/' && buffer[c-1]=='*' && c!=strlen(buffer)-1){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '/'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '*'
+Operator : &
+Operator : &
+Identifiers : c
+
+Operator : !
+Operator : =
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Operator : -
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                                                 state = 1;
+Identifiers : state
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                                 recc = c+1;
+Identifiers : recc
+
+Operator : =
+Identifiers : c
+
+Operator : +
+Integer Constant : 1
+Special Character : ;
+Buffer is                                                 break;
+Keyword : break
+Special Character : ;
+Buffer is                                             }
+Special Character : }
+Buffer is                                         }
+Special Character : }
+Buffer is                                       
+Buffer is                                       char *buffer2;
+Keyword : char
+Operator : *
+Identifiers : buffer2
+
+Special Character : ;
+Buffer is                                       if(state==1){
+Keyword : if
+Special Character : (
+Identifiers : state
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                                          buffer2 = malloc((strlen(buffer)-recc+1)*sizeof(char));
+Identifiers : buffer2
+
+Operator : =
+Identifiers : malloc
+
+Special Character : (
+Special Character : (
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Operator : -
+Identifiers : recc
+
+Operator : +
+Integer Constant : 1
+Special Character : )
+Operator : *
+Keyword : sizeof
+Special Character : (
+Keyword : char
+Special Character : )
+Special Character : )
+Special Character : ;
+Buffer is                                          for(int c=recc;c<strlen(buffer);c++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : c
+
+Operator : =
+Identifiers : recc
+
+Special Character : ;
+Identifiers : c
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : c
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                                             buffer2[c-recc]=buffer[c];
+Identifiers : buffer2
+
+Special Character : [
+Identifiers : c
+
+Operator : -
+Identifiers : recc
+
+Special Character : ]
+Operator : =
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Special Character : ;
+Buffer is                                          }
+Special Character : }
+Buffer is                                          buffer2[strlen(buffer) - recc] = '\0';
+Identifiers : buffer2
+
+Special Character : [
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Operator : -
+Identifiers : recc
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                                       }
+Special Character : }
+Buffer is 
+
+Buffer is                                        if(multilinestr[begin-1]!='/' && multilinestr[begin-2]!='*' && state==0){
+Keyword : if
+Special Character : (
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '/'
+Operator : &
+Operator : &
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Operator : -
+Integer Constant : 2
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '*'
+Operator : &
+Operator : &
+Identifiers : state
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                                          multilinestr[begin]='\n';
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Special Character : ]
+Operator : =
+Character constant : '\n'
+Special Character : ;
+Buffer is                                         begin+=1;
+Identifiers : begin
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                          
+Buffer is                                         
+Buffer is 
+                                       }
+Special Character : }
+Buffer is 
+
+Buffer is 
+                                        multilinestr[begin]='\0';
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is 
+
+Buffer is                                         if(multilinestr[begin-1]=='/' && multilinestr[begin-2]=='*'){
+Keyword : if
+Special Character : (
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '/'
+Operator : &
+Operator : &
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Operator : -
+Integer Constant : 2
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '*'
+Special Character : )
+Special Character : {
+Buffer is                                         multilineflag=1;
+Identifiers : multilineflag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                         MultilineFound=0;
+Identifiers : MultilineFound
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                        
+Buffer is 
+                                       }
+Special Character : }
+Buffer is 
+
+Buffer is                                        buffer[j]='\0';
+Identifiers : buffer
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                                        AnalyseLine(buffer);
+Identifiers : AnalyseLine
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is                                        memset(buffer, '\0', 200);
+Identifiers : memset
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : ,
+Character constant : '\0'
+Special Character : ,
+Integer Constant : 200
+Special Character : )
+Special Character : ;
+Buffer is                                        printf("%s",multilinestr);
+Identifiers : printf
+
+Special Character : (
+String Literal : "%s"
+Special Character : ,
+Identifiers : multilinestr
+
+Special Character : )
+Special Character : ;
+Buffer is                                         fprintf(html, "<span style='color: green;'>%s</span>", multilinestr);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: green;'>%s</span>"
+Special Character : ,
+Identifiers : multilinestr
+
+Special Character : )
+Special Character : ;
+Buffer is                                         if(state==1){
+Keyword : if
+Special Character : (
+Identifiers : state
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                                             AnalyseLine(buffer2);
+Identifiers : AnalyseLine
+
+Special Character : (
+Identifiers : buffer2
+
+Special Character : )
+Special Character : ;
+Buffer is                                               free(buffer2);
+Identifiers : free
+
+Special Character : (
+Identifiers : buffer2
+
+Special Character : )
+Special Character : ;
+Buffer is                                               state=0;
+Identifiers : state
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                           }
+Special Character : }
+Buffer is 
+                                        if(multilineflag==1){
+Keyword : if
+Special Character : (
+Identifiers : multilineflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                                             break;
+Keyword : break
+Special Character : ;
+Buffer is                                         }
+Special Character : }
+Buffer is 
+                                       }
+Special Character : }
+Buffer is                                        
+Buffer is                                        
+Buffer is                                        
+Buffer is 
+                                       if(j==0){
+Keyword : if
+Special Character : (
+Identifiers : j
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                                         int len=strlen(buffer);
+Keyword : int
+Identifiers : len
+
+Operator : =
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is 
+                                        char multilinestr[200];
+Keyword : char
+Identifiers : multilinestr
+
+Special Character : [
+Integer Constant : 200
+Special Character : ]
+Special Character : ;
+Buffer is                                         int begin=0;
+Keyword : int
+Identifiers : begin
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                         int state=0;
+Keyword : int
+Identifiers : state
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                         begin=0;
+Identifiers : begin
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                         int recc;
+Keyword : int
+Identifiers : recc
+
+Special Character : ;
+Buffer is                                         for(int c=j;c<strlen(buffer);c++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : c
+
+Operator : =
+Identifiers : j
+
+Special Character : ;
+Identifiers : c
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : c
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                                             if(buffer[c]!='\r'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant : '\r'
+Special Character : )
+Special Character : {
+Buffer is                                              multilinestr[begin]=buffer[c];
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Special Character : ]
+Operator : =
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Special Character : ;
+Buffer is                                              begin+=1;
+Identifiers : begin
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                             }
+Special Character : }
+Buffer is                                              if(buffer[c]=='/' && buffer[c-1]=='*' && c!=strlen(buffer)-1){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '/'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '*'
+Operator : &
+Operator : &
+Identifiers : c
+
+Operator : !
+Operator : =
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Operator : -
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                                                 state = 1;
+Identifiers : state
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                                 recc = c+1;
+Identifiers : recc
+
+Operator : =
+Identifiers : c
+
+Operator : +
+Integer Constant : 1
+Special Character : ;
+Buffer is                                                 break;
+Keyword : break
+Special Character : ;
+Buffer is                                             }
+Special Character : }
+Buffer is                                         }
+Special Character : }
+Buffer is 
+                                        if(multilinestr[begin-1]!='/' && multilinestr[begin-2]!='*'  && state==0){
+Keyword : if
+Special Character : (
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '/'
+Operator : &
+Operator : &
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Operator : -
+Integer Constant : 2
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '*'
+Operator : &
+Operator : &
+Identifiers : state
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                                          multilinestr[begin]='\n';
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Special Character : ]
+Operator : =
+Character constant : '\n'
+Special Character : ;
+Buffer is                                         begin+=1;
+Identifiers : begin
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                          
+Buffer is                                          printf("sit here...\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "sit here...\n"
+Special Character : )
+Special Character : ;
+Buffer is 
+                                       }
+Special Character : }
+Buffer is 
+                                      char *buffer2;
+Keyword : char
+Operator : *
+Identifiers : buffer2
+
+Special Character : ;
+Buffer is                                       if(state==1){
+Keyword : if
+Special Character : (
+Identifiers : state
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                                          buffer2 = malloc((strlen(buffer)-recc+1)*sizeof(char));
+Identifiers : buffer2
+
+Operator : =
+Identifiers : malloc
+
+Special Character : (
+Special Character : (
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Operator : -
+Identifiers : recc
+
+Operator : +
+Integer Constant : 1
+Special Character : )
+Operator : *
+Keyword : sizeof
+Special Character : (
+Keyword : char
+Special Character : )
+Special Character : )
+Special Character : ;
+Buffer is                                          for(int c=recc;c<strlen(buffer);c++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : c
+
+Operator : =
+Identifiers : recc
+
+Special Character : ;
+Identifiers : c
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : c
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                                             buffer2[c-recc]=buffer[c];
+Identifiers : buffer2
+
+Special Character : [
+Identifiers : c
+
+Operator : -
+Identifiers : recc
+
+Special Character : ]
+Operator : =
+Identifiers : buffer
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Special Character : ;
+Buffer is                                          }
+Special Character : }
+Buffer is                                          buffer2[strlen(buffer) - recc] = '\0';
+Identifiers : buffer2
+
+Special Character : [
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Operator : -
+Identifiers : recc
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                                       }
+Special Character : }
+Buffer is 
+
+Buffer is 
+                                        multilinestr[begin]='\0';
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is 
+
+Buffer is                                         if(multilinestr[begin-1]=='/' && multilinestr[begin-2]=='*'){
+Keyword : if
+Special Character : (
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '/'
+Operator : &
+Operator : &
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : begin
+
+Operator : -
+Integer Constant : 2
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '*'
+Special Character : )
+Special Character : {
+Buffer is                                         multilineflag=1;
+Identifiers : multilineflag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                         MultilineFound=0;
+Identifiers : MultilineFound
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                         printf("sat here..\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "sat here..\n"
+Special Character : )
+Special Character : ;
+Buffer is 
+                                       }
+Special Character : }
+Buffer is 
+                                      
+Buffer is                                        
+Buffer is                                       
+Buffer is                                        
+Buffer is                                        
+Buffer is                                        buffer[j]='\0';
+Identifiers : buffer
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                                        printf("buffer[len-1] is %d\n",buffer[strlen(buffer)-1]);
+Identifiers : printf
+
+Special Character : (
+String Literal : "buffer[len-1] is %d\n"
+Special Character : ,
+Identifiers : buffer
+
+Special Character : [
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Special Character : )
+Special Character : ;
+Buffer is                                        AnalyseLine(buffer);
+Identifiers : AnalyseLine
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is                                        memset(buffer, '\0', 200);
+Identifiers : memset
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : ,
+Character constant : '\0'
+Special Character : ,
+Integer Constant : 200
+Special Character : )
+Special Character : ;
+Buffer is                                        printf("%s",multilinestr);
+Identifiers : printf
+
+Special Character : (
+String Literal : "%s"
+Special Character : ,
+Identifiers : multilinestr
+
+Special Character : )
+Special Character : ;
+Buffer is                                        fprintf(html, "<span style='color: green;'>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: green;'>"
+Special Character : )
+Special Character : ;
+Buffer is                                                  for(int p=0;p<strlen(multilinestr);p++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : p
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : p
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : multilinestr
+
+Special Character : )
+Special Character : ;
+Identifiers : p
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                                                     switch(multilinestr[p]){
+Keyword : switch
+Special Character : (
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : p
+
+Special Character : ]
+Special Character : )
+Special Character : {
+Buffer is                                                      case '<': fprintf(html, "&lt;"); break;
+Keyword : case
+Character constant '<'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&lt;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case '>': fprintf(html, "&gt;"); break;
+Keyword : case
+Character constant '>'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&gt;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case '\"': fprintf(html, "&quot;"); break;
+Keyword : case
+Character constant : '\"'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&quot;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case '&': fprintf(html, "&amp;"); break;
+Keyword : case
+Character constant '&'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&amp;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      case ' ': fprintf(html, "&nbsp;"); break;
+Keyword : case
+Character constant ' '
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&nbsp;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                      default: fputc(multilinestr[p], html); break;
+Keyword : default
+Special Character : :
+Identifiers : fputc
+
+Special Character : (
+Identifiers : multilinestr
+
+Special Character : [
+Identifiers : p
+
+Special Character : ]
+Special Character : ,
+Identifiers : html
+
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is                                                     }
+Special Character : }
+Buffer is                                                  }
+Special Character : }
+Buffer is                                           fprintf(html, "</span>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "</span>"
+Special Character : )
+Special Character : ;
+Buffer is                                           if(state==1){
+Keyword : if
+Special Character : (
+Identifiers : state
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                                             AnalyseLine(buffer2);
+Identifiers : AnalyseLine
+
+Special Character : (
+Identifiers : buffer2
+
+Special Character : )
+Special Character : ;
+Buffer is                                               free(buffer2);
+Identifiers : free
+
+Special Character : (
+Identifiers : buffer2
+
+Special Character : )
+Special Character : ;
+Buffer is                                               state=0;
+Identifiers : state
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                           }
+Special Character : }
+Buffer is                                          
+Buffer is                                            
+Buffer is                                             
+Buffer is                                           
+Buffer is                                       
+Buffer is 
+                                        if(multilineflag==1){
+Keyword : if
+Special Character : (
+Identifiers : multilineflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                                             break;
+Keyword : break
+Special Character : ;
+Buffer is                                         }
+Special Character : }
+Buffer is                                     }
+Special Character : }
+Buffer is 
+                                      
+Buffer is                                       
+Buffer is 
+
+Buffer is                                     MultilineFound=1;
+Identifiers : MultilineFound
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                                    
+Buffer is                                        break;
+Keyword : break
+Special Character : ;
+Buffer is                                 }
+Special Character : }
+Buffer is                             }
+Special Character : }
+Buffer is                         }
+Special Character : }
+Buffer is                         if(MultilineFound==1){
+Keyword : if
+Special Character : (
+Identifiers : MultilineFound
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                            
+Buffer is                             multilineflag=1;
+Identifiers : multilineflag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                             while(1){
+Keyword : while
+Special Character : (
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                                 ch=fgetc(fp);
+Identifiers : ch
+
+Operator : =
+Identifiers : fgetc
+
+Special Character : (
+Identifiers : fp
+
+Special Character : )
+Special Character : ;
+Buffer is                                 if(ch==EOF){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Identifiers : EOF
+
+Special Character : )
+Special Character : {
+Buffer is                                     break;
+Keyword : break
+Special Character : ;
+Buffer is                                 }
+Special Character : }
+Buffer is                                 if(ch!='*'){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : !
+Operator : =
+Character constant '*'
+Special Character : )
+Special Character : {
+Buffer is                                 printf("%c",ch);
+Identifiers : printf
+
+Special Character : (
+String Literal : "%c"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is                                 if(ch!='\r'){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : !
+Operator : =
+Character constant : '\r'
+Special Character : )
+Special Character : {
+Buffer is                                 fprintf(html, "<span style='color: green;'>%c</span>", ch);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: green;'>%c</span>"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is                                 }
+Special Character : }
+Buffer is                             }
+Special Character : }
+Buffer is                                 if(ch=='*'){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Character constant '*'
+Special Character : )
+Special Character : {
+Buffer is                                     if(ch!='\r'){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : !
+Operator : =
+Character constant : '\r'
+Special Character : )
+Special Character : {
+Buffer is                                     printf("%c",ch);
+Identifiers : printf
+
+Special Character : (
+String Literal : "%c"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is                                     fprintf(html, "<span style='color: green;'>%c</span>", ch);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: green;'>%c</span>"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is                                     }
+Special Character : }
+Buffer is                                     ch=fgetc(fp);
+Identifiers : ch
+
+Operator : =
+Identifiers : fgetc
+
+Special Character : (
+Identifiers : fp
+
+Special Character : )
+Special Character : ;
+Buffer is                                     if(ch=='/'){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Character constant '/'
+Special Character : )
+Special Character : {
+Buffer is                                         printf("%c",ch);
+Identifiers : printf
+
+Special Character : (
+String Literal : "%c"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is                                         fprintf(html, "<span style='color: green;'>%c</span>", ch);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: green;'>%c</span>"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is                                         printf("Multiline comment over\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Multiline comment over\n"
+Special Character : )
+Special Character : ;
+Buffer is                                         MultilineFound=0;
+Identifiers : MultilineFound
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                                     }
+Special Character : }
+Buffer is                                 }
+Special Character : }
+Buffer is                                 if(MultilineFound==0 || ch==EOF){
+Keyword : if
+Special Character : (
+Identifiers : MultilineFound
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Operator : |
+Operator : |
+Identifiers : ch
+
+Operator : =
+Operator : =
+Identifiers : EOF
+
+Special Character : )
+Special Character : {
+Buffer is                                     break;
+Keyword : break
+Special Character : ;
+Buffer is                                 }
+Special Character : }
+Buffer is                             }
+Special Character : }
+Buffer is 
+                        }
+Special Character : }
+Buffer is                       
+Buffer is                      
+Buffer is                         if(skip==0 && multilineflag==0 && SingleLineCommentend==0 ){
+Keyword : if
+Special Character : (
+Identifiers : skip
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Operator : &
+Operator : &
+Identifiers : multilineflag
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Operator : &
+Operator : &
+Identifiers : SingleLineCommentend
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                           
+Buffer is                             for(int g1=0;g1<strlen(buffer);g1++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : g1
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : g1
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : g1
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                              
+Buffer is                             }
+Special Character : }
+Buffer is                             buffer[strlen(buffer)-1]='\0';
+Identifiers : buffer
+
+Special Character : [
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                         AnalyseLine(buffer);
+Identifiers : AnalyseLine
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is                         }
+Special Character : }
+Buffer is                   
+Buffer is                         multilineflag=0;
+Identifiers : multilineflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                         SingleLineCommentend=0;
+Identifiers : SingleLineCommentend
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                         i=0;
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                         printf("ch before newline -3 is %d\n",ch);
+Identifiers : printf
+
+Special Character : (
+String Literal : "ch before newline -3 is %d\n"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is 
+                        if(ch=='\n'){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Character constant : '\n'
+Special Character : )
+Special Character : {
+Buffer is                        
+Buffer is                        
+Buffer is                        printf("writing newline -3\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "writing newline -3\n"
+Special Character : )
+Special Character : ;
+Buffer is                        fprintf(html, "\n");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "\n"
+Special Character : )
+Special Character : ;
+Buffer is                         
+Buffer is                         }
+Special Character : }
+Buffer is                         
+Buffer is                         break;
+Keyword : break
+Special Character : ;
+Buffer is                       }
+Special Character : }
+Buffer is 
+                }
+Special Character : }
+Buffer is               }
+Special Character : }
+Buffer is 
+
+Buffer is 
+        if(ch==EOF){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Identifiers : EOF
+
+Special Character : )
+Special Character : {
+Buffer is            
+Buffer is            
+Buffer is             break;
+Keyword : break
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is 
+
+Buffer is       }
+Special Character : }
+Buffer is       free(buffer);
+Identifiers : free
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is 
+  return e_success;
+Keyword : return
+Identifiers : e_success
+
+Special Character : ;
+Buffer is 
+ }
+Special Character : }
+Buffer is 
+
+Buffer is  Status AnalyseLine(char *buffer){
+Identifiers : Status
+
+Identifiers : AnalyseLine
+
+Special Character : (
+Keyword : char
+Operator : *
+Identifiers : buffer
+
+Special Character : )
+Special Character : {
+Buffer is     printf("Buffer is %s\n",buffer);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Buffer is %s\n"
+Special Character : ,
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is     OpenBracketcount=0;
+Identifiers : OpenBracketcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is     CloseBracketcount=0;
+Identifiers : CloseBracketcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is     closesquarebracketCount=0;
+Identifiers : closesquarebracketCount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is     opensquarebracketCount=0;
+Identifiers : opensquarebracketCount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is     int EndFlag = 0;
+Keyword : int
+Identifiers : EndFlag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is     char Word[200];
+Keyword : char
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 200
+Special Character : ]
+Special Character : ;
+Buffer is     int index=0;
+Keyword : int
+Identifiers : index
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is     int j;
+Keyword : int
+Identifiers : j
+
+Special Character : ;
+Buffer is     int DoubleQuoteFlag=0;
+Keyword : int
+Identifiers : DoubleQuoteFlag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is     int LiteralClosed=0;
+Keyword : int
+Identifiers : LiteralClosed
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is     char DoubleString[200];;
+Keyword : char
+Identifiers : DoubleString
+
+Special Character : [
+Integer Constant : 200
+Special Character : ]
+Special Character : ;
+Special Character : ;
+Buffer is     int len=strlen(buffer);
+Keyword : int
+Identifiers : len
+
+Operator : =
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is     int indarr[len];
+Keyword : int
+Identifiers : indarr
+
+Special Character : [
+Identifiers : len
+
+Special Character : ]
+Special Character : ;
+Buffer is     int Literalcount=0;
+Keyword : int
+Identifiers : Literalcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is     int recorddouble;
+Keyword : int
+Identifiers : recorddouble
+
+Special Character : ;
+Buffer is     int CharFlag=0;
+Keyword : int
+Identifiers : CharFlag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is     int Charcount=0;
+Keyword : int
+Identifiers : Charcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is 
+    for(int i=0;i<strlen(buffer);i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is         indarr[i]=-1;
+Identifiers : indarr
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : -
+Integer Constant : 1
+Special Character : ;
+Buffer is     }
+Special Character : }
+Buffer is 
+    for(int i=0;i<strlen(buffer);i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is 
+        if(buffer[i]=='\n'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\n'
+Special Character : )
+Special Character : {
+Buffer is             fprintf(html, "\n");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "\n"
+Special Character : )
+Special Character : ;
+Buffer is             continue;
+Keyword : continue
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is         if(buffer[i]=='\r'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\r'
+Special Character : )
+Special Character : {
+Buffer is             continue;
+Keyword : continue
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is 
+        for(int l=0;l<strlen(buffer);l++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : l
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : l
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : l
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is             if(indarr[l]==i){
+Keyword : if
+Special Character : (
+Identifiers : indarr
+
+Special Character : [
+Identifiers : l
+
+Special Character : ]
+Operator : =
+Operator : =
+Identifiers : i
+
+Special Character : )
+Special Character : {
+Buffer is                 DoubleQuoteFlag=1;
+Identifiers : DoubleQuoteFlag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                 break;
+Keyword : break
+Special Character : ;
+Buffer is             }else if(indarr[l]==-1){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : indarr
+
+Special Character : [
+Identifiers : l
+
+Special Character : ]
+Operator : =
+Operator : =
+Operator : -
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                 continue;
+Keyword : continue
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is         }
+Special Character : }
+Buffer is 
+        if(DoubleQuoteFlag==1){
+Keyword : if
+Special Character : (
+Identifiers : DoubleQuoteFlag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is             DoubleQuoteFlag=0;
+Identifiers : DoubleQuoteFlag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is             continue;
+Keyword : continue
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is 
+    if(buffer[i]=='\'' ){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\''
+Special Character : )
+Special Character : {
+Buffer is         if(CharFlag==0){
+Keyword : if
+Special Character : (
+Identifiers : CharFlag
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is             EndFlag = 0;
+Identifiers : EndFlag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is 
+        if(buffer[i-1]=='\\' && buffer[i-2]=='\\' && EndFlag!=1){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Operator : -
+Integer Constant : 2
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : EndFlag
+
+Operator : !
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is         CharFlag=1;
+Identifiers : CharFlag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is         Charcount+=1;
+Identifiers : Charcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is         if(buffer[i-1]!='\\' && EndFlag!=1){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : !
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : EndFlag
+
+Operator : !
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is             CharFlag=1;
+Identifiers : CharFlag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is             Charcount+=1;
+Identifiers : Charcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is 
+    }
+Special Character : }
+Buffer is 
+    if(buffer[i]=='\"' && buffer[i-1]!='\\' && CharFlag==0){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\"'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : !
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : CharFlag
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is          DoubleQuoteFlag=0;
+Identifiers : DoubleQuoteFlag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is          int Slashcount=0;
+Keyword : int
+Identifiers : Slashcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is          Literalcount+=1;
+Identifiers : Literalcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is         j=0;
+Identifiers : j
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is         int p=j;
+Keyword : int
+Identifiers : p
+
+Operator : =
+Identifiers : j
+
+Special Character : ;
+Buffer is         int k=i;
+Keyword : int
+Identifiers : k
+
+Operator : =
+Identifiers : i
+
+Special Character : ;
+Buffer is          Word[j]=buffer[k];
+Identifiers : Word
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Identifiers : buffer
+
+Special Character : [
+Identifiers : k
+
+Special Character : ]
+Special Character : ;
+Buffer is          DoubleString[j]=buffer[k];
+Identifiers : DoubleString
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Identifiers : buffer
+
+Special Character : [
+Identifiers : k
+
+Special Character : ]
+Special Character : ;
+Buffer is          indarr[j]=k;
+Identifiers : indarr
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Identifiers : k
+
+Special Character : ;
+Buffer is          j+=1;
+Identifiers : j
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is          k+=1;
+Identifiers : k
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is          int breakflag=0;
+Keyword : int
+Identifiers : breakflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is 
+         for(int f=k;f<strlen(buffer);f++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : f
+
+Operator : =
+Identifiers : k
+
+Special Character : ;
+Identifiers : f
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : f
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is 
+           if(buffer[f]=='\\' && Slashcount==0  && (buffer[f+1]=='\\' || buffer[f+1]=='\"')){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : Slashcount
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Operator : &
+Operator : &
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : |
+Operator : |
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\"'
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is             Slashcount+=1;
+Identifiers : Slashcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is           }
+Special Character : }
+Buffer is           if(buffer[f]=='\\' && buffer[f-1]=='\\' && Slashcount!=0 && (buffer[f+1]=='\\' || buffer[f+1]=='\"') ){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : Slashcount
+
+Operator : !
+Operator : =
+Integer Constant : 0
+Operator : &
+Operator : &
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : |
+Operator : |
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\"'
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is             Slashcount+=1;
+Identifiers : Slashcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is           }
+Special Character : }
+Buffer is            if(buffer[f]=='\\' && buffer[f-1]=='\\' && Slashcount!=0 && (buffer[f+1]!='\\' && buffer[f+1]!='\"') ){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : Slashcount
+
+Operator : !
+Operator : =
+Integer Constant : 0
+Operator : &
+Operator : &
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : !
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : !
+Operator : =
+Character constant : '\"'
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is             Slashcount=0;
+Identifiers : Slashcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is           }
+Special Character : }
+Buffer is 
+            if(buffer[f]=='\"'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\"'
+Special Character : )
+Special Character : {
+Buffer is 
+                if(buffer[f-1]=='\\' && Slashcount % 2 != 0){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : Slashcount
+
+Operator : %
+Integer Constant : 2
+Operator : !
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                     Slashcount=0;
+Identifiers : Slashcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                     continue;
+Keyword : continue
+Special Character : ;
+Buffer is                 }
+Special Character : }
+Buffer is 
+                if(buffer[f-1]!='\\' || (Slashcount%2==0) && buffer[f-1]=='\\'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : !
+Operator : =
+Character constant : '\\'
+Operator : |
+Operator : |
+Special Character : (
+Identifiers : Slashcount
+
+Operator : %
+Integer Constant : 2
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : f
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Special Character : )
+Special Character : {
+Buffer is                 Literalcount+=1;
+Identifiers : Literalcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                 Slashcount=0;
+Identifiers : Slashcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                 breakflag=1;
+Identifiers : breakflag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                 }
+Special Character : }
+Buffer is                 recorddouble=f;
+Identifiers : recorddouble
+
+Operator : =
+Identifiers : f
+
+Special Character : ;
+Buffer is 
+            }
+Special Character : }
+Buffer is             if(breakflag==1){
+Keyword : if
+Special Character : (
+Identifiers : breakflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                 break;
+Keyword : break
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is             DoubleString[p]=k;
+Identifiers : DoubleString
+
+Special Character : [
+Identifiers : p
+
+Special Character : ]
+Operator : =
+Identifiers : k
+
+Special Character : ;
+Buffer is             p+=1;
+Identifiers : p
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is          }
+Special Character : }
+Buffer is          if(Literalcount%2!=0){
+Keyword : if
+Special Character : (
+Identifiers : Literalcount
+
+Operator : %
+Integer Constant : 2
+Operator : !
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is             DoubleString[p]='\0';
+Identifiers : DoubleString
+
+Special Character : [
+Identifiers : p
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is             printf("Error : \" missing\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error : \" missing\n"
+Special Character : )
+Special Character : ;
+Buffer is 
+         }else if(Literalcount%2==0){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Literalcount
+
+Operator : %
+Integer Constant : 2
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is 
+         while(k<=recorddouble){
+Keyword : while
+Special Character : (
+Identifiers : k
+
+Operator : <
+Operator : =
+Identifiers : recorddouble
+
+Special Character : )
+Special Character : {
+Buffer is              Word[j]=buffer[k];
+Identifiers : Word
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Identifiers : buffer
+
+Special Character : [
+Identifiers : k
+
+Special Character : ]
+Special Character : ;
+Buffer is              indarr[j]=k;
+Identifiers : indarr
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Identifiers : k
+
+Special Character : ;
+Buffer is              j+=1;
+Identifiers : j
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is              k+=1;
+Identifiers : k
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is              if(k==recorddouble ){
+Keyword : if
+Special Character : (
+Identifiers : k
+
+Operator : =
+Operator : =
+Identifiers : recorddouble
+
+Special Character : )
+Special Character : {
+Buffer is                 Word[j]=buffer[k];
+Identifiers : Word
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Identifiers : buffer
+
+Special Character : [
+Identifiers : k
+
+Special Character : ]
+Special Character : ;
+Buffer is                 LiteralClosed=1;
+Identifiers : LiteralClosed
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                 indarr[j]=k;
+Identifiers : indarr
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Operator : =
+Identifiers : k
+
+Special Character : ;
+Buffer is                 Word[j+1] = '\0';
+Identifiers : Word
+
+Special Character : [
+Identifiers : j
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                 if(LiteralClosed==1){
+Keyword : if
+Special Character : (
+Identifiers : LiteralClosed
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                 printf("String Literal : %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "String Literal : %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is                  fprintf(html, "<span class='string'>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='string'>"
+Special Character : )
+Special Character : ;
+Buffer is                  for (int c = 0; c< strlen(Word); c++) {
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : c
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : c
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Identifiers : c
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is             switch (Word[c]) {
+Keyword : switch
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Special Character : )
+Special Character : {
+Buffer is             case '<': fprintf(html, "&lt;"); break;
+Keyword : case
+Character constant '<'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&lt;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is             case '>': fprintf(html, "&gt;"); break;
+Keyword : case
+Character constant '>'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&gt;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is             case '\"': fprintf(html, "&quot;"); break;
+Keyword : case
+Character constant : '\"'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&quot;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is             case '&': fprintf(html, "&amp;"); break;
+Keyword : case
+Character constant '&'
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&amp;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is             case ' ': fprintf(html, "&nbsp;"); break;
+Keyword : case
+Character constant ' '
+Special Character : :
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&nbsp;"
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is             default: fputc(Word[c], html); break;
+Keyword : default
+Special Character : :
+Identifiers : fputc
+
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : c
+
+Special Character : ]
+Special Character : ,
+Identifiers : html
+
+Special Character : )
+Special Character : ;
+Keyword : break
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is     }
+Special Character : }
+Buffer is                fprintf(html, "</span>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "</span>"
+Special Character : )
+Special Character : ;
+Buffer is                 }
+Special Character : }
+Buffer is                 if(LiteralClosed==0){
+Keyword : if
+Special Character : (
+Identifiers : LiteralClosed
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                     printf("Error : \" missing\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error : \" missing\n"
+Special Character : )
+Special Character : ;
+Buffer is                 }
+Special Character : }
+Buffer is                 break;
+Keyword : break
+Special Character : ;
+Buffer is              }
+Special Character : }
+Buffer is          }
+Special Character : }
+Buffer is         }
+Special Character : }
+Buffer is 
+    } else {
+Special Character : }
+Keyword : else
+Special Character : {
+Buffer is          Status collect;
+Identifiers : Status
+
+Identifiers : collect
+
+Special Character : ;
+Buffer is          if(CharFlag==0){
+Keyword : if
+Special Character : (
+Identifiers : CharFlag
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is          collect = CheckCharIsOperatorOrSpecialCharacters(buffer[i],1);
+Identifiers : collect
+
+Operator : =
+Identifiers : CheckCharIsOperatorOrSpecialCharacters
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : ,
+Integer Constant : 1
+Special Character : )
+Special Character : ;
+Buffer is          }
+Special Character : }
+Buffer is         if(CharFlag==1){
+Keyword : if
+Special Character : (
+Identifiers : CharFlag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is         collect=e_failure;
+Identifiers : collect
+
+Operator : =
+Identifiers : e_failure
+
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is         if(CharFlag==1 && buffer[i]==' '){
+Keyword : if
+Special Character : (
+Identifiers : CharFlag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant ' '
+Special Character : )
+Special Character : {
+Buffer is             Word[index]=buffer[i];
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Special Character : ]
+Operator : =
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is 
+         if(collect==e_failure && buffer[i]!=' ' || (buffer[i]==' ' && CharFlag==1)){
+Keyword : if
+Special Character : (
+Identifiers : collect
+
+Operator : =
+Operator : =
+Identifiers : e_failure
+
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant ' '
+Operator : |
+Operator : |
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant ' '
+Operator : &
+Operator : &
+Identifiers : CharFlag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is              Word[index]=buffer[i];
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Special Character : ]
+Operator : =
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : ;
+Buffer is                 if(Charcount==2){
+Keyword : if
+Special Character : (
+Identifiers : Charcount
+
+Operator : =
+Operator : =
+Integer Constant : 2
+Special Character : )
+Special Character : {
+Buffer is                     Word[index+1]='\0';
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                     CompareWord(Word,keywords,operators);
+Identifiers : CompareWord
+
+Special Character : (
+Identifiers : Word
+
+Special Character : ,
+Identifiers : keywords
+
+Special Character : ,
+Identifiers : operators
+
+Special Character : )
+Special Character : ;
+Buffer is                   CharFlag=0;
+Identifiers : CharFlag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                   EndFlag=1;
+Identifiers : EndFlag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                   Charcount=0;
+Identifiers : Charcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                   index = 0;
+Identifiers : index
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                   continue;
+Keyword : continue
+Special Character : ;
+Buffer is                 }
+Special Character : }
+Buffer is 
+
+Buffer is              collect = CheckCharIsOperatorOrSpecialCharacters(buffer[i+1],0);
+Identifiers : collect
+
+Operator : =
+Identifiers : CheckCharIsOperatorOrSpecialCharacters
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Special Character : ,
+Integer Constant : 0
+Special Character : )
+Special Character : ;
+Buffer is              index+=1;
+Identifiers : index
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is 
+             if((collect==e_success || buffer[i+1]==' ' )&& CharFlag==0) {
+Keyword : if
+Special Character : (
+Special Character : (
+Identifiers : collect
+
+Operator : =
+Operator : =
+Identifiers : e_success
+
+Operator : |
+Operator : |
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant ' '
+Special Character : )
+Operator : &
+Operator : &
+Identifiers : CharFlag
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                  Word[index]='\0';
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                  CompareWord(Word,keywords,operators);
+Identifiers : CompareWord
+
+Special Character : (
+Identifiers : Word
+
+Special Character : ,
+Identifiers : keywords
+
+Special Character : ,
+Identifiers : operators
+
+Special Character : )
+Special Character : ;
+Buffer is                  index=0;
+Identifiers : index
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is 
+            if(i==strlen(buffer)-1){
+Keyword : if
+Special Character : (
+Identifiers : i
+
+Operator : =
+Operator : =
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Operator : -
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                  if (Word[index-1] == '\r' || Word[index-1] == '\n') {
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\r'
+Operator : |
+Operator : |
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\n'
+Special Character : )
+Special Character : {
+Buffer is                      Word[index-1] = '\0';  
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is               }
+Special Character : }
+Buffer is 
+                Word[index]='\0';
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is                 CharFlag=0;
+Identifiers : CharFlag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                 Charcount=0;
+Identifiers : Charcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                 CompareWord(Word,keywords,operators);
+Identifiers : CompareWord
+
+Special Character : (
+Identifiers : Word
+
+Special Character : ,
+Identifiers : keywords
+
+Special Character : ,
+Identifiers : operators
+
+Special Character : )
+Special Character : ;
+Buffer is                 index=0;
+Identifiers : index
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is 
+         }else if(collect==e_success || buffer[i]==' ' ){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : collect
+
+Operator : =
+Operator : =
+Identifiers : e_success
+
+Operator : |
+Operator : |
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant ' '
+Special Character : )
+Special Character : {
+Buffer is 
+                  if(buffer[i]==' '){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant ' '
+Special Character : )
+Special Character : {
+Buffer is                       printf("space...\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "space...\n"
+Special Character : )
+Special Character : ;
+Buffer is                       fprintf(html, "&nbsp;");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "&nbsp;"
+Special Character : )
+Special Character : ;
+Buffer is                      
+Buffer is                      
+Buffer is                  }
+Special Character : }
+Buffer is                  index=0;
+Identifiers : index
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is          }
+Special Character : }
+Buffer is         }
+Special Character : }
+Buffer is     }
+Special Character : }
+Buffer is     if (index > 0) {
+Keyword : if
+Special Character : (
+Identifiers : index
+
+Operator : >
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is     if (Word[index-1] == '\r' || Word[index-1] == '\n') {
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\r'
+Operator : |
+Operator : |
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\n'
+Special Character : )
+Special Character : {
+Buffer is         Word[index-1] = '\0';
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is     }
+Special Character : }
+Buffer is     Word[index] = '\0';
+Identifiers : Word
+
+Special Character : [
+Identifiers : index
+
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is     CompareWord(Word, keywords, operators);
+Identifiers : CompareWord
+
+Special Character : (
+Identifiers : Word
+
+Special Character : ,
+Identifiers : keywords
+
+Special Character : ,
+Identifiers : operators
+
+Special Character : )
+Special Character : ;
+Buffer is     index = 0;
+Identifiers : index
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is }
+Special Character : }
+Buffer is 
+  if(OpenBracketcount !=CloseBracketcount){
+Keyword : if
+Special Character : (
+Identifiers : OpenBracketcount
+
+Operator : !
+Operator : =
+Identifiers : CloseBracketcount
+
+Special Character : )
+Special Character : {
+Buffer is     if(OpenBracketcount>CloseBracketcount){
+Keyword : if
+Special Character : (
+Identifiers : OpenBracketcount
+
+Operator : >
+Identifiers : CloseBracketcount
+
+Special Character : )
+Special Character : {
+Buffer is         printf("Error : ) missing\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error : ) missing\n"
+Special Character : )
+Special Character : ;
+Buffer is     }else if(OpenBracketcount<CloseBracketcount){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : OpenBracketcount
+
+Operator : <
+Identifiers : CloseBracketcount
+
+Special Character : )
+Special Character : {
+Buffer is         printf("Error : ( missing\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error : ( missing\n"
+Special Character : )
+Special Character : ;
+Buffer is     }
+Special Character : }
+Buffer is }
+Special Character : }
+Buffer is 
+if(opensquarebracketCount !=closesquarebracketCount){
+Keyword : if
+Special Character : (
+Identifiers : opensquarebracketCount
+
+Operator : !
+Operator : =
+Identifiers : closesquarebracketCount
+
+Special Character : )
+Special Character : {
+Buffer is     if(opensquarebracketCount>closesquarebracketCount){
+Keyword : if
+Special Character : (
+Identifiers : opensquarebracketCount
+
+Operator : >
+Identifiers : closesquarebracketCount
+
+Special Character : )
+Special Character : {
+Buffer is         printf("Error : ] missing\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error : ] missing\n"
+Special Character : )
+Special Character : ;
+Buffer is     }else if(opensquarebracketCount<closesquarebracketCount){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : opensquarebracketCount
+
+Operator : <
+Identifiers : closesquarebracketCount
+
+Special Character : )
+Special Character : {
+Buffer is         printf("Error : [ missing\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error : [ missing\n"
+Special Character : )
+Special Character : ;
+Buffer is     }
+Special Character : }
+Buffer is }
+Special Character : }
+Buffer is OpenBracketcount=0;
+Identifiers : OpenBracketcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is CloseBracketcount=0;
+Identifiers : CloseBracketcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is closesquarebracketCount=0;
+Identifiers : closesquarebracketCount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is opensquarebracketCount=0;
+Identifiers : opensquarebracketCount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is 
+ }
+Special Character : }
+Buffer is  Status CheckCharIsOperatorOrSpecialCharacters(char ch,int num){
+Identifiers : Status
+
+Identifiers : CheckCharIsOperatorOrSpecialCharacters
+
+Special Character : (
+Keyword : char
+Identifiers : ch
+
+Special Character : ,
+Keyword : int
+Identifiers : num
+
+Special Character : )
+Special Character : {
+Buffer is     for(int i=0;i<strlen(operators);i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : operators
+
+Special Character : )
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is         if(ch==operators[i]){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Identifiers : operators
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Special Character : {
+Buffer is             if(num==1){
+Keyword : if
+Special Character : (
+Identifiers : num
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is             printf("Operator : %c\n",ch);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Operator : %c\n"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is             fprintf(html, "<span class='operator'>%c</span>", ch);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='operator'>%c</span>"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is 
+            }
+Special Character : }
+Buffer is             return e_success;
+Keyword : return
+Identifiers : e_success
+
+Special Character : ;
+Buffer is 
+        }
+Special Character : }
+Buffer is     }
+Special Character : }
+Buffer is     for(int i=0;i<strlen(specialCharacters);i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : specialCharacters
+
+Special Character : )
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is         if(ch==specialCharacters[i]){
+Keyword : if
+Special Character : (
+Identifiers : ch
+
+Operator : =
+Operator : =
+Identifiers : specialCharacters
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Special Character : {
+Buffer is             switch(specialCharacters[i]){
+Keyword : switch
+Special Character : (
+Identifiers : specialCharacters
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Special Character : {
+Buffer is                 case '{':
+Keyword : case
+Character constant '{'
+Special Character : :
+Buffer is                    if(num==1){
+Keyword : if
+Special Character : (
+Identifiers : num
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                    OpencurlyBracketcount+=1;
+Identifiers : OpencurlyBracketcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                   
+Buffer is                    }
+Special Character : }
+Buffer is                    break;
+Keyword : break
+Special Character : ;
+Buffer is                 case '}':
+Keyword : case
+Character constant '}'
+Special Character : :
+Buffer is                    if(num==1){
+Keyword : if
+Special Character : (
+Identifiers : num
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                    ClosecurlyBracketcount+=1;
+Identifiers : ClosecurlyBracketcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                  
+Buffer is                    }
+Special Character : }
+Buffer is                    break;
+Keyword : break
+Special Character : ;
+Buffer is 
+                case '(':
+Keyword : case
+Character constant '('
+Special Character : :
+Buffer is                   if(num==1){
+Keyword : if
+Special Character : (
+Identifiers : num
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                    OpenBracketcount+=1;
+Identifiers : OpenBracketcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                    
+Buffer is                   }
+Special Character : }
+Buffer is                    break;
+Keyword : break
+Special Character : ;
+Buffer is                 case ')':
+Keyword : case
+Character constant ')'
+Special Character : :
+Buffer is                    if(num==1){
+Keyword : if
+Special Character : (
+Identifiers : num
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                     CloseBracketcount+=1;
+Identifiers : CloseBracketcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                     
+Buffer is                    }
+Special Character : }
+Buffer is                     break;
+Keyword : break
+Special Character : ;
+Buffer is 
+                case '[':
+Keyword : case
+Character constant '['
+Special Character : :
+Buffer is                    if(num==1){
+Keyword : if
+Special Character : (
+Identifiers : num
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                     opensquarebracketCount+=1;
+Identifiers : opensquarebracketCount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                     
+Buffer is                    }
+Special Character : }
+Buffer is                     break;
+Keyword : break
+Special Character : ;
+Buffer is                 case ']':
+Keyword : case
+Character constant ']'
+Special Character : :
+Buffer is                    if(num==1){
+Keyword : if
+Special Character : (
+Identifiers : num
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                     closesquarebracketCount+=1;
+Identifiers : closesquarebracketCount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                     
+Buffer is                    }
+Special Character : }
+Buffer is                     break;
+Keyword : break
+Special Character : ;
+Buffer is 
+                default:
+Keyword : default
+Special Character : :
+Buffer is                    
+Buffer is                     break;
+Keyword : break
+Special Character : ;
+Buffer is 
+            }
+Special Character : }
+Buffer is             if(num==1){
+Keyword : if
+Special Character : (
+Identifiers : num
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is             printf("Special Character : %c\n",ch);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Special Character : %c\n"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is             fprintf(html, "<span class='special'>%c</span>", ch);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='special'>%c</span>"
+Special Character : ,
+Identifiers : ch
+
+Special Character : )
+Special Character : ;
+Buffer is 
+            }
+Special Character : }
+Buffer is             return e_success;
+Keyword : return
+Identifiers : e_success
+
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is     }
+Special Character : }
+Buffer is     return e_failure;
+Keyword : return
+Identifiers : e_failure
+
+Special Character : ;
+Buffer is  }
+Special Character : }
+Buffer is 
+
+Buffer is Status CompareWord(char *Word,const char* keywords[],const char* operators){
+Identifiers : Status
+
+Identifiers : CompareWord
+
+Special Character : (
+Keyword : char
+Operator : *
+Identifiers : Word
+
+Special Character : ,
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : keywords
+
+Special Character : [
+Special Character : ]
+Special Character : ,
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : operators
+
+Special Character : )
+Special Character : {
+Buffer is        for(int i=0;i<32;i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Integer Constant : 32
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is         if(strcmp(Word,keywords[i])==0){
+Keyword : if
+Special Character : (
+Identifiers : strcmp
+
+Special Character : (
+Identifiers : Word
+
+Special Character : ,
+Identifiers : keywords
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is             printf("Keyword : %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Keyword : %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is             fprintf(html, "<span class='keyword'>%s</span>", Word);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='keyword'>%s</span>"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is             return e_success;
+Keyword : return
+Identifiers : e_success
+
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is        }
+Special Character : }
+Buffer is        int Flag=1;
+Keyword : int
+Identifiers : Flag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is        int DotFlag=0;
+Keyword : int
+Identifiers : DotFlag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is        int Dotcount=0;
+Keyword : int
+Identifiers : Dotcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is        int Errorflag = 0;
+Keyword : int
+Identifiers : Errorflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is        if(Word[0]>='0' && Word[0]<='9'){
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : >
+Operator : =
+Character constant '0'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : <
+Operator : =
+Character constant '9'
+Special Character : )
+Special Character : {
+Buffer is 
+       for(int i=1;i<strlen(Word);i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is           if(Word[i]=='.'){
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '.'
+Special Character : )
+Special Character : {
+Buffer is                DotFlag=1;
+Identifiers : DotFlag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                Dotcount+=1;
+Identifiers : Dotcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is           }else if(Word[i]>='0' && Word[i]<='9'){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : >
+Operator : =
+Character constant '0'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : <
+Operator : =
+Character constant '9'
+Special Character : )
+Special Character : {
+Buffer is                  Flag = Flag && 1;
+Identifiers : Flag
+
+Operator : =
+Identifiers : Flag
+
+Operator : &
+Operator : &
+Integer Constant : 1
+Special Character : ;
+Buffer is           }else if(!(Word[i]>='0' && Word[i]<='9')){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Operator : !
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : >
+Operator : =
+Character constant '0'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : <
+Operator : =
+Character constant '9'
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is                Flag = Flag && 0;
+Identifiers : Flag
+
+Operator : =
+Identifiers : Flag
+
+Operator : &
+Operator : &
+Integer Constant : 0
+Special Character : ;
+Buffer is                Errorflag = 1;
+Identifiers : Errorflag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is           }
+Special Character : }
+Buffer is        }
+Special Character : }
+Buffer is 
+       if(Errorflag==1 && DotFlag==1 && Dotcount==1){
+Keyword : if
+Special Character : (
+Identifiers : Errorflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : DotFlag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : Dotcount
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is         int Error=0;
+Keyword : int
+Identifiers : Error
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is 
+        if(Word[strlen(Word)-1]=='L' || (Word[strlen(Word)-1]=='f')){
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant 'L'
+Operator : |
+Operator : |
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Operator : -
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant 'f'
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is             for(int i=0;i<strlen(Word)-1;i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Operator : -
+Integer Constant : 1
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                 if(Word[i]=='.'){
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '.'
+Special Character : )
+Special Character : {
+Buffer is                     continue;
+Keyword : continue
+Special Character : ;
+Buffer is                 }else if(Word[i]=='e'){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant 'e'
+Special Character : )
+Special Character : {
+Buffer is                     continue;
+Keyword : continue
+Special Character : ;
+Buffer is                 }
+Special Character : }
+Buffer is                 if(!(Word[i]>='0' && Word[i]<='9')){
+Keyword : if
+Special Character : (
+Operator : !
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : >
+Operator : =
+Character constant '0'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : <
+Operator : =
+Character constant '9'
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is                     Error = 1;
+Identifiers : Error
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                 }
+Special Character : }
+Buffer is             }
+Special Character : }
+Buffer is             if(Error == 0){
+Keyword : if
+Special Character : (
+Identifiers : Error
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                 printf("Floating Point constant : %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Floating Point constant : %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is                 fprintf(html, "<span class='constant'>%s</span>", Word);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='constant'>%s</span>"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is 
+            }else if(Error==1){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Error
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                 printf("Error in floating point\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error in floating point\n"
+Special Character : )
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is         }
+Special Character : }
+Buffer is       }else if(Flag==1 && DotFlag==0){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Flag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : DotFlag
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is 
+
+Buffer is           printf("Integer Constant : %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Integer Constant : %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is           fprintf(html, "<span class='constant'>%s</span>", Word);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='constant'>%s</span>"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is        }else if(DotFlag==1 && Dotcount==1 && Errorflag==0){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : DotFlag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : Dotcount
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : Errorflag
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is           printf("Floating point constant : %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Floating point constant : %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is           fprintf(html, "<span class='constant'>%s</span>", Word);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='constant'>%s</span>"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is        }else if(Errorflag==1){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Errorflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is            printf("Error in Identifiers \n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error in Identifiers \n"
+Special Character : )
+Special Character : ;
+Buffer is        }
+Special Character : }
+Buffer is 
+    }else if(Word[0]=='\''){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\''
+Special Character : )
+Special Character : {
+Buffer is          if(strlen(Word)==4 && Word[1]=='\\' && Word[3]=='\''){
+Keyword : if
+Special Character : (
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Operator : =
+Operator : =
+Integer Constant : 4
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 3
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\''
+Special Character : )
+Special Character : {
+Buffer is             char esc[3];
+Keyword : char
+Identifiers : esc
+
+Special Character : [
+Integer Constant : 3
+Special Character : ]
+Special Character : ;
+Buffer is             esc[0]=Word[1];
+Identifiers : esc
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : =
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 1
+Special Character : ]
+Special Character : ;
+Buffer is             esc[1]=Word[2];
+Identifiers : esc
+
+Special Character : [
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 2
+Special Character : ]
+Special Character : ;
+Buffer is             esc[2]='\0';
+Identifiers : esc
+
+Special Character : [
+Integer Constant : 2
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is             for(int i=0;i<11;i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Integer Constant : 11
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                 if(strcmp(esc,validCharConstants[i])==0){
+Keyword : if
+Special Character : (
+Identifiers : strcmp
+
+Special Character : (
+Identifiers : esc
+
+Special Character : ,
+Identifiers : validCharConstants
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                     printf("Character constant : %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Character constant : %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is                      fprintf(html, "<span class='constant'>%s</span>", Word);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='constant'>%s</span>"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is                     break;
+Keyword : break
+Special Character : ;
+Buffer is                 }
+Special Character : }
+Buffer is             }
+Special Character : }
+Buffer is 
+         }else if(strlen(Word)==3 && Word[2]== '\''){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Operator : =
+Operator : =
+Integer Constant : 3
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 2
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\''
+Special Character : )
+Special Character : {
+Buffer is                  printf("Character constant %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Character constant %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is                   fprintf(html, "<span class='constant'>%s</span>", Word);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='constant'>%s</span>"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is          }else {
+Special Character : }
+Keyword : else
+Special Character : {
+Buffer is             printf("Error in character constant ");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error in character constant "
+Special Character : )
+Special Character : ;
+Buffer is          }
+Special Character : }
+Buffer is 
+    }else if((Word[0]>='a' && Word[0]<='z') ||(Word[0]>='A' && Word[0]<='Z') || (Word[0]=='_')){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : >
+Operator : =
+Character constant 'a'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : <
+Operator : =
+Character constant 'z'
+Special Character : )
+Operator : |
+Operator : |
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : >
+Operator : =
+Character constant 'A'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : <
+Operator : =
+Character constant 'Z'
+Special Character : )
+Operator : |
+Operator : |
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '_'
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is 
+        int l = strlen(Word);
+Keyword : int
+Identifiers : l
+
+Operator : =
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is         int first = 0;
+Keyword : int
+Identifiers : first
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is         int last = 0;
+Keyword : int
+Identifiers : last
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is         int Errorflag = 0;
+Keyword : int
+Identifiers : Errorflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is 
+        for(int i=0;i<l;i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Identifiers : l
+
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is 
+           if((!(Word[i]>='a' && Word[i]<='z')) && (!(Word[i]>='A' && Word[i]<='Z')) &&(!(Word[i]>='0' && Word[i]<='9')) && Word[i]!='_' && Word[i]!='.'){
+Keyword : if
+Special Character : (
+Special Character : (
+Operator : !
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : >
+Operator : =
+Character constant 'a'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : <
+Operator : =
+Character constant 'z'
+Special Character : )
+Special Character : )
+Operator : &
+Operator : &
+Special Character : (
+Operator : !
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : >
+Operator : =
+Character constant 'A'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : <
+Operator : =
+Character constant 'Z'
+Special Character : )
+Special Character : )
+Operator : &
+Operator : &
+Special Character : (
+Operator : !
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : >
+Operator : =
+Character constant '0'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : <
+Operator : =
+Character constant '9'
+Special Character : )
+Special Character : )
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '_'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '.'
+Special Character : )
+Special Character : {
+Buffer is             Errorflag=1;
+Identifiers : Errorflag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is            }
+Special Character : }
+Buffer is 
+           if(Word[i]=='.' || i==l-1){
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '.'
+Operator : |
+Operator : |
+Identifiers : i
+
+Operator : =
+Operator : =
+Identifiers : l
+
+Operator : -
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is              if(Word[i]=='.'){
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '.'
+Special Character : )
+Special Character : {
+Buffer is              last = i-1;
+Identifiers : last
+
+Operator : =
+Identifiers : i
+
+Operator : -
+Integer Constant : 1
+Special Character : ;
+Buffer is               char subWord[(last-first)+2];
+Keyword : char
+Identifiers : subWord
+
+Special Character : [
+Special Character : (
+Identifiers : last
+
+Operator : -
+Identifiers : first
+
+Special Character : )
+Operator : +
+Integer Constant : 2
+Special Character : ]
+Special Character : ;
+Buffer is 
+             for(int j=first;j<=last;j++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : j
+
+Operator : =
+Identifiers : first
+
+Special Character : ;
+Identifiers : j
+
+Operator : <
+Operator : =
+Identifiers : last
+
+Special Character : ;
+Identifiers : j
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                 subWord[j-first]=Word[j];
+Identifiers : subWord
+
+Special Character : [
+Identifiers : j
+
+Operator : -
+Identifiers : first
+
+Special Character : ]
+Operator : =
+Identifiers : Word
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Special Character : ;
+Buffer is              }
+Special Character : }
+Buffer is              subWord[(last - first)+1]='\0';
+Identifiers : subWord
+
+Special Character : [
+Special Character : (
+Identifiers : last
+
+Operator : -
+Identifiers : first
+
+Special Character : )
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is              printf("subword is %s\n",subWord);
+Identifiers : printf
+
+Special Character : (
+String Literal : "subword is %s\n"
+Special Character : ,
+Identifiers : subWord
+
+Special Character : )
+Special Character : ;
+Buffer is              CompareSubWord(subWord, keywords,operators);
+Identifiers : CompareSubWord
+
+Special Character : (
+Identifiers : subWord
+
+Special Character : ,
+Identifiers : keywords
+
+Special Character : ,
+Identifiers : operators
+
+Special Character : )
+Special Character : ;
+Buffer is 
+
+Buffer is              }else if(i==l-1){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : i
+
+Operator : =
+Operator : =
+Identifiers : l
+
+Operator : -
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                 last = l-1;
+Identifiers : last
+
+Operator : =
+Identifiers : l
+
+Operator : -
+Integer Constant : 1
+Special Character : ;
+Buffer is                 char subWord[(last-first)+2];
+Keyword : char
+Identifiers : subWord
+
+Special Character : [
+Special Character : (
+Identifiers : last
+
+Operator : -
+Identifiers : first
+
+Special Character : )
+Operator : +
+Integer Constant : 2
+Special Character : ]
+Special Character : ;
+Buffer is 
+             for(int j=first;j<=last;j++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : j
+
+Operator : =
+Identifiers : first
+
+Special Character : ;
+Identifiers : j
+
+Operator : <
+Operator : =
+Identifiers : last
+
+Special Character : ;
+Identifiers : j
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                 subWord[j-first]=Word[j];
+Identifiers : subWord
+
+Special Character : [
+Identifiers : j
+
+Operator : -
+Identifiers : first
+
+Special Character : ]
+Operator : =
+Identifiers : Word
+
+Special Character : [
+Identifiers : j
+
+Special Character : ]
+Special Character : ;
+Buffer is              }
+Special Character : }
+Buffer is              subWord[(last - first)+1]='\0';
+Identifiers : subWord
+
+Special Character : [
+Special Character : (
+Identifiers : last
+
+Operator : -
+Identifiers : first
+
+Special Character : )
+Operator : +
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is              CompareSubWord(subWord, keywords,operators);
+Identifiers : CompareSubWord
+
+Special Character : (
+Identifiers : subWord
+
+Special Character : ,
+Identifiers : keywords
+
+Special Character : ,
+Identifiers : operators
+
+Special Character : )
+Special Character : ;
+Buffer is 
+             }
+Special Character : }
+Buffer is 
+             if(Errorflag==0){
+Keyword : if
+Special Character : (
+Identifiers : Errorflag
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is 
+
+Buffer is             }else if(Errorflag==1){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Errorflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                 printf("Error in Identifiers");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error in Identifiers"
+Special Character : )
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is             printf("\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "\n"
+Special Character : )
+Special Character : ;
+Buffer is             if(Word[i]=='.'){
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '.'
+Special Character : )
+Special Character : {
+Buffer is                 printf("Special character : .\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Special character : .\n"
+Special Character : )
+Special Character : ;
+Buffer is                 fprintf(html, "<span class='special'>.</span>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='special'>.</span>"
+Special Character : )
+Special Character : ;
+Buffer is                 first = i+1;
+Identifiers : first
+
+Operator : =
+Identifiers : i
+
+Operator : +
+Integer Constant : 1
+Special Character : ;
+Buffer is                 Errorflag=0;
+Identifiers : Errorflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is            }
+Special Character : }
+Buffer is         }
+Special Character : }
+Buffer is 
+    }
+Special Character : }
+Buffer is 
+ }
+Special Character : }
+Buffer is 
+
+Buffer is 
+ Status CompareSubWord(char *Word,const char* keywords[],const char* operators){
+Identifiers : Status
+
+Identifiers : CompareSubWord
+
+Special Character : (
+Keyword : char
+Operator : *
+Identifiers : Word
+
+Special Character : ,
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : keywords
+
+Special Character : [
+Special Character : ]
+Special Character : ,
+Keyword : const
+Keyword : char
+Operator : *
+Identifiers : operators
+
+Special Character : )
+Special Character : {
+Buffer is 
+       for(int i=0;i<32;i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Integer Constant : 32
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is         if(strcmp(Word,keywords[i])==0){
+Keyword : if
+Special Character : (
+Identifiers : strcmp
+
+Special Character : (
+Identifiers : Word
+
+Special Character : ,
+Identifiers : keywords
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is             printf("Keyword : %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Keyword : %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is             fprintf(html, "<span class='keyword'>%s</span>", Word);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='keyword'>%s</span>"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is             return e_success;
+Keyword : return
+Identifiers : e_success
+
+Special Character : ;
+Buffer is         }
+Special Character : }
+Buffer is        }
+Special Character : }
+Buffer is        int Flag=1;
+Keyword : int
+Identifiers : Flag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is        int DotFlag=0;
+Keyword : int
+Identifiers : DotFlag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is        int Dotcount=0;
+Keyword : int
+Identifiers : Dotcount
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is        int Errorflag = 0;
+Keyword : int
+Identifiers : Errorflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is 
+       if(strlen(Word)==1 && Word[0]=='.'){
+Keyword : if
+Special Character : (
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '.'
+Special Character : )
+Special Character : {
+Buffer is         printf("Special Character : .\n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Special Character : .\n"
+Special Character : )
+Special Character : ;
+Buffer is         fprintf(html, "<span class='special'>.</span>");
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='special'>.</span>"
+Special Character : )
+Special Character : ;
+Buffer is        }
+Special Character : }
+Buffer is        if(Word[0]>='0' && Word[0]<='9'){
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : >
+Operator : =
+Character constant '0'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : <
+Operator : =
+Character constant '9'
+Special Character : )
+Special Character : {
+Buffer is 
+       for(int i=1;i<strlen(Word);i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is           if(Word[i]=='.'){
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '.'
+Special Character : )
+Special Character : {
+Buffer is                DotFlag=1;
+Identifiers : DotFlag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                Dotcount+=1;
+Identifiers : Dotcount
+
+Operator : +
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is           }else if(Word[i]>='0' && Word[i]<='9'){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : >
+Operator : =
+Character constant '0'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : <
+Operator : =
+Character constant '9'
+Special Character : )
+Special Character : {
+Buffer is                  Flag = Flag && 1;
+Identifiers : Flag
+
+Operator : =
+Identifiers : Flag
+
+Operator : &
+Operator : &
+Integer Constant : 1
+Special Character : ;
+Buffer is           }else if(!(Word[i]>='0' && Word[i]<='9')){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Operator : !
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : >
+Operator : =
+Character constant '0'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : <
+Operator : =
+Character constant '9'
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is                Flag = Flag && 0;
+Identifiers : Flag
+
+Operator : =
+Identifiers : Flag
+
+Operator : &
+Operator : &
+Integer Constant : 0
+Special Character : ;
+Buffer is                Errorflag = 1;
+Identifiers : Errorflag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is           }
+Special Character : }
+Buffer is        }
+Special Character : }
+Buffer is 
+       if(Flag==1 && DotFlag==0){
+Keyword : if
+Special Character : (
+Identifiers : Flag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : DotFlag
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is           printf("Integer Constant : %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Integer Constant : %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is           fprintf(html, "<span class='constant'>%s</span>", Word);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='constant'>%s</span>"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is        }else if(DotFlag==1 && Dotcount==1 && Errorflag==0){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : DotFlag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : Dotcount
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : Errorflag
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is           printf("Floating point constant : %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Floating point constant : %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is        }else if(Errorflag==1){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Errorflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is            printf("Error in Identifiers \n");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error in Identifiers \n"
+Special Character : )
+Special Character : ;
+Buffer is        }
+Special Character : }
+Buffer is 
+    }else if(Word[0]=='\''){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\''
+Special Character : )
+Special Character : {
+Buffer is          if(strlen(Word)==4 && Word[1]=='\\' && Word[3]=='\''){
+Keyword : if
+Special Character : (
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Operator : =
+Operator : =
+Integer Constant : 4
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\\'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 3
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\''
+Special Character : )
+Special Character : {
+Buffer is             char esc[3];
+Keyword : char
+Identifiers : esc
+
+Special Character : [
+Integer Constant : 3
+Special Character : ]
+Special Character : ;
+Buffer is             esc[0]=Word[1];
+Identifiers : esc
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : =
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 1
+Special Character : ]
+Special Character : ;
+Buffer is             esc[1]=Word[2];
+Identifiers : esc
+
+Special Character : [
+Integer Constant : 1
+Special Character : ]
+Operator : =
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 2
+Special Character : ]
+Special Character : ;
+Buffer is             esc[2]='\0';
+Identifiers : esc
+
+Special Character : [
+Integer Constant : 2
+Special Character : ]
+Operator : =
+Character constant : '\0'
+Special Character : ;
+Buffer is             for(int i=0;i<11;i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Integer Constant : 11
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is                 if(strcmp(esc,validCharConstants[i])==0){
+Keyword : if
+Special Character : (
+Identifiers : strcmp
+
+Special Character : (
+Identifiers : esc
+
+Special Character : ,
+Identifiers : validCharConstants
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is                     printf("Character constant : %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Character constant : %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is                      fprintf(html, "<span class='constant'>%s</span>", Word);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='constant'>%s</span>"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is                     break;
+Keyword : break
+Special Character : ;
+Buffer is                 }
+Special Character : }
+Buffer is             }
+Special Character : }
+Buffer is 
+         }else if(strlen(Word)==3 && Word[2]== '\''){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Operator : =
+Operator : =
+Integer Constant : 3
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 2
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\''
+Special Character : )
+Special Character : {
+Buffer is                  printf("Character constant %s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "Character constant %s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is                   fprintf(html, "<span class='constant'>%s</span>", Word);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='constant'>%s</span>"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is          }else {
+Special Character : }
+Keyword : else
+Special Character : {
+Buffer is             printf("Error in character constant ");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error in character constant "
+Special Character : )
+Special Character : ;
+Buffer is          }
+Special Character : }
+Buffer is 
+    }else if((Word[0]>='a' && Word[0]<='z') ||(Word[0]>='A' && Word[0]<='Z') || (Word[0]=='_')){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : >
+Operator : =
+Character constant 'a'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : <
+Operator : =
+Character constant 'z'
+Special Character : )
+Operator : |
+Operator : |
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : >
+Operator : =
+Character constant 'A'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : <
+Operator : =
+Character constant 'Z'
+Special Character : )
+Operator : |
+Operator : |
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Integer Constant : 0
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '_'
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is 
+        int l = strlen(Word);
+Keyword : int
+Identifiers : l
+
+Operator : =
+Identifiers : strlen
+
+Special Character : (
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is         int first = 0;
+Keyword : int
+Identifiers : first
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is         int last = 0;
+Keyword : int
+Identifiers : last
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is         int Errorflag = 0;
+Keyword : int
+Identifiers : Errorflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is 
+        for(int i=0;i<l;i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Identifiers : l
+
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is 
+           if((!(Word[i]>='a' && Word[i]<='z')) && (!(Word[i]>='A' && Word[i]<='Z')) &&(!(Word[i]>='0' && Word[i]<='9')) && Word[i]!='_' && Word[i]!='.'){
+Keyword : if
+Special Character : (
+Special Character : (
+Operator : !
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : >
+Operator : =
+Character constant 'a'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : <
+Operator : =
+Character constant 'z'
+Special Character : )
+Special Character : )
+Operator : &
+Operator : &
+Special Character : (
+Operator : !
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : >
+Operator : =
+Character constant 'A'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : <
+Operator : =
+Character constant 'Z'
+Special Character : )
+Special Character : )
+Operator : &
+Operator : &
+Special Character : (
+Operator : !
+Special Character : (
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : >
+Operator : =
+Character constant '0'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : <
+Operator : =
+Character constant '9'
+Special Character : )
+Special Character : )
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '_'
+Operator : &
+Operator : &
+Identifiers : Word
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '.'
+Special Character : )
+Special Character : {
+Buffer is             Errorflag=1;
+Identifiers : Errorflag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is            }
+Special Character : }
+Buffer is         }
+Special Character : }
+Buffer is 
+         if(Errorflag==0){
+Keyword : if
+Special Character : (
+Identifiers : Errorflag
+
+Operator : =
+Operator : =
+Integer Constant : 0
+Special Character : )
+Special Character : {
+Buffer is             printf("Identifiers : ");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Identifiers : "
+Special Character : )
+Special Character : ;
+Buffer is             printf("%s\n",Word);
+Identifiers : printf
+
+Special Character : (
+String Literal : "%s\n"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is             fprintf(html, "<span class='identifier'>%s</span>", Word);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span class='identifier'>%s</span>"
+Special Character : ,
+Identifiers : Word
+
+Special Character : )
+Special Character : ;
+Buffer is            }else if(Errorflag==1){
+Special Character : }
+Keyword : else
+Keyword : if
+Special Character : (
+Identifiers : Errorflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                 printf("Error in Identifiers");
+Identifiers : printf
+
+Special Character : (
+String Literal : "Error in Identifiers"
+Special Character : )
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is     }
+Special Character : }
+Buffer is  }
+Special Character : }
+Buffer is 
+
+Buffer is  Status ProcessPreprocessor(char *buffer){
+Identifiers : Status
+
+Identifiers : ProcessPreprocessor
+
+Special Character : (
+Keyword : char
+Operator : *
+Identifiers : buffer
+
+Special Character : )
+Special Character : {
+Buffer is 
+        int Purpleflag=0;
+Keyword : int
+Identifiers : Purpleflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is         int Brownflag=0;
+Keyword : int
+Identifiers : Brownflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is         int c=0;
+Keyword : int
+Identifiers : c
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is         printf(" pre str is %s\n",buffer);
+Identifiers : printf
+
+Special Character : (
+String Literal : " pre str is %s\n"
+Special Character : ,
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Buffer is         for(int i=0;i<strlen(buffer);i++){
+Keyword : for
+Special Character : (
+Keyword : int
+Identifiers : i
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Identifiers : i
+
+Operator : <
+Identifiers : strlen
+
+Special Character : (
+Identifiers : buffer
+
+Special Character : )
+Special Character : ;
+Identifiers : i
+
+Operator : +
+Operator : +
+Special Character : )
+Special Character : {
+Buffer is             if(buffer[i]=='\r'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\r'
+Special Character : )
+Special Character : {
+Buffer is                 continue;
+Keyword : continue
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is 
+            if(buffer[i]=='#'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '#'
+Special Character : )
+Special Character : {
+Buffer is                  fprintf(html, "<span style='color: purple;'>%c</span>", buffer[i]);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: purple;'>%c</span>"
+Special Character : ,
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Special Character : ;
+Buffer is                  Purpleflag=1;
+Identifiers : Purpleflag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is             if(Purpleflag==1 && buffer[i]!='#' && buffer[i]!='<' && buffer[i]!='>' && buffer[i]!='\"'){
+Keyword : if
+Special Character : (
+Identifiers : Purpleflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '#'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '<'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '>'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant : '\"'
+Special Character : )
+Special Character : {
+Buffer is                 fprintf(html, "<span style='color: purple;'>%c</span>", buffer[i]);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: purple;'>%c</span>"
+Special Character : ,
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is             if((buffer[i]=='<' || buffer[i]=='\"') && Purpleflag==1){
+Keyword : if
+Special Character : (
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '<'
+Operator : |
+Operator : |
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\"'
+Special Character : )
+Operator : &
+Operator : &
+Identifiers : Purpleflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Special Character : )
+Special Character : {
+Buffer is                 if(buffer[i]=='\"'){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\"'
+Special Character : )
+Special Character : {
+Buffer is                     c=i;
+Identifiers : c
+
+Operator : =
+Identifiers : i
+
+Special Character : ;
+Buffer is                 }
+Special Character : }
+Buffer is                 Brownflag=1;
+Identifiers : Brownflag
+
+Operator : =
+Integer Constant : 1
+Special Character : ;
+Buffer is                 Purpleflag=0;
+Identifiers : Purpleflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                 fprintf(html, "<span style='color: brown;'>%c</span>", buffer[i]);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: brown;'>%c</span>"
+Special Character : ,
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is 
+
+Buffer is 
+            if(buffer[i]=='>' || (buffer[i]=='\"' && Brownflag==1 && i!=c)){
+Keyword : if
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant '>'
+Operator : |
+Operator : |
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : =
+Operator : =
+Character constant : '\"'
+Operator : &
+Operator : &
+Identifiers : Brownflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Identifiers : i
+
+Operator : !
+Operator : =
+Identifiers : c
+
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is 
+                Brownflag=0;
+Identifiers : Brownflag
+
+Operator : =
+Integer Constant : 0
+Special Character : ;
+Buffer is                 fprintf(html, "<span style='color: brown;'>%c</span>", buffer[i]);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: brown;'>%c</span>"
+Special Character : ,
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Special Character : ;
+Buffer is 
+            }
+Special Character : }
+Buffer is 
+
+Buffer is             if(Brownflag==1 && (buffer[i]!='<' && buffer[i]!='>' && buffer[i]!='\"')){
+Keyword : if
+Special Character : (
+Identifiers : Brownflag
+
+Operator : =
+Operator : =
+Integer Constant : 1
+Operator : &
+Operator : &
+Special Character : (
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '<'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant '>'
+Operator : &
+Operator : &
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Operator : !
+Operator : =
+Character constant : '\"'
+Special Character : )
+Special Character : )
+Special Character : {
+Buffer is 
+                fprintf(html, "<span style='color: brown;'>%c</span>", buffer[i]);
+Identifiers : fprintf
+
+Special Character : (
+Identifiers : html
+
+Special Character : ,
+String Literal : "<span style='color: brown;'>%c</span>"
+Special Character : ,
+Identifiers : buffer
+
+Special Character : [
+Identifiers : i
+
+Special Character : ]
+Special Character : )
+Special Character : ;
+Buffer is             }
+Special Character : }
+Buffer is 
+
+Buffer is 
+          
+Buffer is             
+Buffer is             
+Buffer is 
+        }
+Special Character : }
+Buffer is 
+ }
+Special Character : }
+Opencurly and close curly is 216 and 216
